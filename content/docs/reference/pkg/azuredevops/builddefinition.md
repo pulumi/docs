@@ -271,8 +271,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuredevops/sdk/v2/go/azuredevops"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -370,19 +370,34 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionCiTriggerArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionPullRequestTriggerArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionRepositoryArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BuildDefinitionVariableArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuildDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuildDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BuildDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BuildDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -417,22 +432,32 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BuildDefinitionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,7 +466,7 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -465,7 +490,7 @@ const sampleDotnetcoreAppRelease = new azuredevops.BuildDefinition("sampleDotnet
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -690,7 +715,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
 {{% /md %}}</dd><dt class="property-required"
@@ -699,7 +724,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">pulumi<wbr>Input<Build<wbr>Definition<wbr>Repository<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +733,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The agent pool that should execute the build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +742,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#citrigger_nodejs" style="color: inherit; text-decoration: inherit;">ci<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">pulumi<wbr>Input<Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +751,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +760,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The folder path of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +769,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#pullrequesttrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +778,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#variablegroups_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A list of variable group IDs (integers) to link to the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +787,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -775,7 +800,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
 {{% /md %}}</dd><dt class="property-required"
@@ -784,7 +809,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">Input[Build<wbr>Definition<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +818,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The agent pool that should execute the build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +827,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#ci_trigger_python" style="color: inherit; text-decoration: inherit;">ci_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">Input[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +836,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +845,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The folder path of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +854,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#pull_request_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +863,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#variable_groups_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A list of variable group IDs (integers) to link to the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +872,7 @@ The BuildDefinition resource accepts the following [input]({{< relref "/docs/int
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Sequence[Build<wbr>Definition<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">Input[Build<wbr>Definition<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -952,20 +977,32 @@ Get an existing BuildDefinition resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BuildDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BuildDefinition</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BuildDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BuildDefinition</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionCiTriggerArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionPullRequestTriggerArgs]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[BuildDefinitionRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[BuildDefinitionVariableArgs]]</span> = None<span class="p">) -&gt;</span> BuildDefinition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ci_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionCiTriggerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pull_request_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionPullRequestTriggerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BuildDefinitionRepositoryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">variable_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BuildDefinitionVariableArgs]]]]</span> = None<span class="p">) -&gt;</span> BuildDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuildDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BuildDefinitionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuildDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BuildDefinitionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BuildDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BuildDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BuildDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BuildDefinition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BuildDefinitionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1262,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The agent pool that should execute the build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_citrigger_nodejs" style="color: inherit; text-decoration: inherit;">ci<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">pulumi<wbr>Input<Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The folder path of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_pullrequesttrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">pulumi<wbr>Input<Build<wbr>Definition<wbr>Repository<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The revision of the build definition
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_variablegroups_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A list of variable group IDs (integers) to link to the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Build<wbr>Definition<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -1356,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The agent pool that should execute the build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1402,7 @@ The following state arguments are supported:
 <a href="#state_ci_trigger_python" style="color: inherit; text-decoration: inherit;">ci_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitrigger">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitioncitrigger">Input[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Continuous Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1420,7 @@ The following state arguments are supported:
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The folder path of the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1438,7 @@ The following state arguments are supported:
 <a href="#state_pull_request_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttrigger">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pull Request Integration Integration trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionrepository">Build<wbr>Definition<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionrepository">Input[Build<wbr>Definition<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `repository` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1456,7 @@ The following state arguments are supported:
 <a href="#state_revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The revision of the build definition
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1465,7 @@ The following state arguments are supported:
 <a href="#state_variable_groups_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A list of variable group IDs (integers) to link to the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1474,7 @@ The following state arguments are supported:
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionvariable">Sequence[Build<wbr>Definition<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitionvariable">Input[Build<wbr>Definition<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `variable` blocks, as documented below.
 {{% /md %}}</dd></dl>
@@ -1505,7 +1542,7 @@ The following state arguments are supported:
 <a href="#override_nodejs" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverride">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverride">pulumi<wbr>Input<Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use a this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1551,7 @@ The following state arguments are supported:
 <a href="#useyaml_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Yaml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use the azure-pipeline file for the build configuration. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1527,7 +1564,7 @@ The following state arguments are supported:
 <a href="#override_python" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverride">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverride">Input[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use a this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1573,7 @@ The following state arguments are supported:
 <a href="#use_yaml_python" style="color: inherit; text-decoration: inherit;">use_<wbr>yaml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use the azure-pipeline file for the build configuration. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1667,7 +1704,7 @@ The following state arguments are supported:
 <a href="#batch_nodejs" style="color: inherit; text-decoration: inherit;">batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If you set batch to true, when a pipeline is running, the system waits until the run is completed, then starts another run with all changes that have not yet been built. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1713,7 @@ The following state arguments are supported:
 <a href="#branchfilters_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1722,7 @@ The following state arguments are supported:
 <a href="#maxconcurrentbuildsperbranch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Builds<wbr>Per<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of max builds per branch. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1731,7 @@ The following state arguments are supported:
 <a href="#pathfilters_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1740,7 @@ The following state arguments are supported:
 <a href="#pollinginterval_nodejs" style="color: inherit; text-decoration: inherit;">polling<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How often the external repository is polled. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1749,7 @@ The following state arguments are supported:
 <a href="#pollingjobid_nodejs" style="color: inherit; text-decoration: inherit;">polling<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the ID of the polling job that polls the external repository. Once the build definition is saved/updated, this value is set.
 {{% /md %}}</dd></dl>
@@ -1725,7 +1762,7 @@ The following state arguments are supported:
 <a href="#batch_python" style="color: inherit; text-decoration: inherit;">batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If you set batch to true, when a pipeline is running, the system waits until the run is completed, then starts another run with all changes that have not yet been built. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1771,7 @@ The following state arguments are supported:
 <a href="#branch_filters_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">Sequence[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridebranchfilter">Input[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1780,7 @@ The following state arguments are supported:
 <a href="#max_concurrent_builds_per_branch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>builds_<wbr>per_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of max builds per branch. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1789,7 @@ The following state arguments are supported:
 <a href="#path_filters_python" style="color: inherit; text-decoration: inherit;">path_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">Sequence[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitioncitriggeroverridepathfilter">Input[Build<wbr>Definition<wbr>Ci<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1798,7 @@ The following state arguments are supported:
 <a href="#polling_interval_python" style="color: inherit; text-decoration: inherit;">polling_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How often the external repository is polled. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1807,7 @@ The following state arguments are supported:
 <a href="#polling_job_id_python" style="color: inherit; text-decoration: inherit;">polling_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the ID of the polling job that polls the external repository. Once the build definition is saved/updated, this value is set.
 {{% /md %}}</dd></dl>
@@ -1829,7 +1866,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1838,7 +1875,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -1851,7 +1888,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1897,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -1919,7 +1956,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1928,7 +1965,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -1941,7 +1978,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1987,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -2059,7 +2096,7 @@ The following state arguments are supported:
 <a href="#forks_nodejs" style="color: inherit; text-decoration: inherit;">forks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set permissions for Forked repositories.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2105,7 @@ The following state arguments are supported:
 <a href="#commentrequired_nodejs" style="color: inherit; text-decoration: inherit;">comment<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2076,7 +2113,7 @@ The following state arguments are supported:
 <a href="#initialbranch_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2084,7 +2121,7 @@ The following state arguments are supported:
 <a href="#override_nodejs" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2130,7 @@ The following state arguments are supported:
 <a href="#useyaml_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Yaml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use the azure-pipeline file for the build configuration. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2106,7 +2143,7 @@ The following state arguments are supported:
 <a href="#forks_python" style="color: inherit; text-decoration: inherit;">forks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggerforks">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Forks<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set permissions for Forked repositories.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2152,7 @@ The following state arguments are supported:
 <a href="#comment_required_python" style="color: inherit; text-decoration: inherit;">comment_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2160,7 @@ The following state arguments are supported:
 <a href="#initial_branch_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2168,7 @@ The following state arguments are supported:
 <a href="#override_python" style="color: inherit; text-decoration: inherit;">override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Args</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverride">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override the azure-pipeline file and use this configuration for all builds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2177,7 @@ The following state arguments are supported:
 <a href="#use_yaml_python" style="color: inherit; text-decoration: inherit;">use_<wbr>yaml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use the azure-pipeline file for the build configuration. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2199,7 +2236,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Build pull requests form forms of this repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -2208,7 +2245,7 @@ The following state arguments are supported:
 <a href="#sharesecrets_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Make secrets available to builds of forks.
 {{% /md %}}</dd></dl>
@@ -2221,7 +2258,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Build pull requests form forms of this repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -2230,7 +2267,7 @@ The following state arguments are supported:
 <a href="#share_secrets_python" style="color: inherit; text-decoration: inherit;">share_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Make secrets available to builds of forks.
 {{% /md %}}</dd></dl>
@@ -2307,7 +2344,7 @@ The following state arguments are supported:
 <a href="#autocancel_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Cancel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2353,7 @@ The following state arguments are supported:
 <a href="#branchfilters_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2325,7 +2362,7 @@ The following state arguments are supported:
 <a href="#pathfilters_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">pulumi<wbr>Input<pulumi<wbr>Input<Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd></dl>
@@ -2338,7 +2375,7 @@ The following state arguments are supported:
 <a href="#auto_cancel_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>cancel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2384,7 @@ The following state arguments are supported:
 <a href="#branch_filters_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">Sequence[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridebranchfilter">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Branch<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The branches to include and exclude from the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2393,7 @@ The following state arguments are supported:
 <a href="#path_filters_python" style="color: inherit; text-decoration: inherit;">path_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">Sequence[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#builddefinitionpullrequesttriggeroverridepathfilter">Input[Build<wbr>Definition<wbr>Pull<wbr>Request<wbr>Trigger<wbr>Override<wbr>Path<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 {{% /md %}}</dd></dl>
@@ -2415,7 +2452,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2461,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -2437,7 +2474,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2483,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -2505,7 +2542,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2551,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -2527,7 +2564,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to exclude.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2536,7 +2573,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of branch patterns to include.
 {{% /md %}}</dd></dl>
@@ -2685,7 +2722,7 @@ The following state arguments are supported:
 <a href="#repoid_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the repository. For `TfsGit` repos, this is simply the ID of the repository. For `Github` repos, this will take the form of `<GitHub Org>/<Repo Name>`. For `Bitbucket` repos, this will take the form of `<Workspace ID>/<Repo Name>`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2694,7 +2731,7 @@ The following state arguments are supported:
 <a href="#repotype_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository type. Valid values: `GitHub` or `TfsGit` or `Bitbucket` or `GitHub Enterprise`. Defaults to `GitHub`. If `repo_type` is `GitHubEnterprise`, must use existing project and GitHub Enterprise service connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2703,7 +2740,7 @@ The following state arguments are supported:
 <a href="#ymlpath_nodejs" style="color: inherit; text-decoration: inherit;">yml<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path of the Yaml file describing the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2712,7 +2749,7 @@ The following state arguments are supported:
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The branch name for which builds are triggered. Defaults to `master`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2758,7 @@ The following state arguments are supported:
 <a href="#githubenterpriseurl_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Enterprise<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Github Enterprise URL. Used if `repo_type` is `GithubEnterprise`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2767,7 @@ The following state arguments are supported:
 <a href="#reportbuildstatus_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Build<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Report build status. Default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2739,7 +2776,7 @@ The following state arguments are supported:
 <a href="#serviceconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service connection ID. Used if the `repo_type` is `GitHub` or `GitHubEnterprise`.
 {{% /md %}}</dd></dl>
@@ -2752,7 +2789,7 @@ The following state arguments are supported:
 <a href="#repo_id_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the repository. For `TfsGit` repos, this is simply the ID of the repository. For `Github` repos, this will take the form of `<GitHub Org>/<Repo Name>`. For `Bitbucket` repos, this will take the form of `<Workspace ID>/<Repo Name>`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2761,7 +2798,7 @@ The following state arguments are supported:
 <a href="#repo_type_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository type. Valid values: `GitHub` or `TfsGit` or `Bitbucket` or `GitHub Enterprise`. Defaults to `GitHub`. If `repo_type` is `GitHubEnterprise`, must use existing project and GitHub Enterprise service connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2770,7 +2807,7 @@ The following state arguments are supported:
 <a href="#yml_path_python" style="color: inherit; text-decoration: inherit;">yml_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path of the Yaml file describing the build definition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2779,7 +2816,7 @@ The following state arguments are supported:
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The branch name for which builds are triggered. Defaults to `master`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2788,7 +2825,7 @@ The following state arguments are supported:
 <a href="#github_enterprise_url_python" style="color: inherit; text-decoration: inherit;">github_<wbr>enterprise_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Github Enterprise URL. Used if `repo_type` is `GithubEnterprise`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2797,7 +2834,7 @@ The following state arguments are supported:
 <a href="#report_build_status_python" style="color: inherit; text-decoration: inherit;">report_<wbr>build_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Report build status. Default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2806,7 +2843,7 @@ The following state arguments are supported:
 <a href="#service_connection_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service connection ID. Used if the `repo_type` is `GitHub` or `GitHubEnterprise`.
 {{% /md %}}</dd></dl>
@@ -2919,7 +2956,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2928,7 +2965,7 @@ The following state arguments are supported:
 <a href="#allowoverride_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the variable can be overridden. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2937,7 +2974,7 @@ The following state arguments are supported:
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the variable is a secret. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2946,7 +2983,7 @@ The following state arguments are supported:
 <a href="#secretvalue_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secret value of the variable. Used when `is_secret` set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2955,7 +2992,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the variable.
 {{% /md %}}</dd></dl>
@@ -2968,7 +3005,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2977,7 +3014,7 @@ The following state arguments are supported:
 <a href="#allow_override_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the variable can be overridden. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2986,7 +3023,7 @@ The following state arguments are supported:
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the variable is a secret. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2995,7 +3032,7 @@ The following state arguments are supported:
 <a href="#secret_value_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secret value of the variable. Used when `is_secret` set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3004,7 +3041,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
 {{% /md %}}</dd></dl>

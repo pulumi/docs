@@ -94,8 +94,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azuredevops/sdk/v2/go/azuredevops"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -243,19 +243,29 @@ const branchPolicyAutoReviewers = new azuredevops.BranchPolicyAutoReviewers("bra
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[BranchPolicyAutoReviewersSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BranchPolicyAutoReviewersSettingsArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyAutoReviewers</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyAutoReviewers</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BranchPolicyAutoReviewers</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -290,22 +300,32 @@ const branchPolicyAutoReviewers = new azuredevops.BranchPolicyAutoReviewers("bra
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BranchPolicyAutoReviewersArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +334,7 @@ const branchPolicyAutoReviewers = new azuredevops.BranchPolicyAutoReviewers("bra
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -338,7 +358,7 @@ const branchPolicyAutoReviewers = new azuredevops.BranchPolicyAutoReviewers("bra
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -473,7 +493,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -482,7 +502,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">pulumi<wbr>Input<Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -491,7 +511,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -500,7 +520,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -513,7 +533,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -522,7 +542,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Input[Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -531,7 +551,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -540,7 +560,7 @@ The BranchPolicyAutoReviewers resource accepts the following [input]({{< relref 
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -609,20 +629,26 @@ Get an existing BranchPolicyAutoReviewers resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BranchPolicyAutoReviewersState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BranchPolicyAutoReviewers</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BranchPolicyAutoReviewersState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BranchPolicyAutoReviewers</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[BranchPolicyAutoReviewersSettingsArgs]</span> = None<span class="p">) -&gt;</span> BranchPolicyAutoReviewers</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BranchPolicyAutoReviewersSettingsArgs]]</span> = None<span class="p">) -&gt;</span> BranchPolicyAutoReviewers</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchPolicyAutoReviewers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BranchPolicyAutoReviewersState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyAutoReviewers</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchPolicyAutoReviewers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BranchPolicyAutoReviewersState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyAutoReviewers</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BranchPolicyAutoReviewers</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BranchPolicyAutoReviewersState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BranchPolicyAutoReviewers</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BranchPolicyAutoReviewersState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -811,7 +837,7 @@ The following state arguments are supported:
 <a href="#state_blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +846,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +855,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +864,7 @@ The following state arguments are supported:
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">pulumi<wbr>Input<Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
 {{% /md %}}</dd></dl>
@@ -851,7 +877,7 @@ The following state arguments are supported:
 <a href="#state_blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +886,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -869,7 +895,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -878,7 +904,7 @@ The following state arguments are supported:
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettings">Input[Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
 {{% /md %}}</dd></dl>
@@ -1000,7 +1026,7 @@ The following state arguments are supported:
 <a href="#autoreviewerids_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Reviewer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required reviewers ids. Supports multiples user Ids.
 {{% /md %}}</dd><dt class="property-required"
@@ -1009,7 +1035,7 @@ The following state arguments are supported:
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettingsscope">Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Scope[]</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettingsscope">pulumi<wbr>Input<pulumi<wbr>Input<Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Scope<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +1044,7 @@ The following state arguments are supported:
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Activity feed message, Message will appear in the activity feed of pull requests with automatically added reviewers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +1053,7 @@ The following state arguments are supported:
 <a href="#pathfilters_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths. Example: /WebApp/Models/Data.cs, /WebApp/* or *.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1062,7 @@ The following state arguments are supported:
 <a href="#submittercanvote_nodejs" style="color: inherit; text-decoration: inherit;">submitter<wbr>Can<wbr>Vote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1049,7 +1075,7 @@ The following state arguments are supported:
 <a href="#auto_reviewer_ids_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>reviewer_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required reviewers ids. Supports multiples user Ids.
 {{% /md %}}</dd><dt class="property-required"
@@ -1058,7 +1084,7 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchpolicyautoreviewerssettingsscope">Sequence[Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#branchpolicyautoreviewerssettingsscope">Input[Branch<wbr>Policy<wbr>Auto<wbr>Reviewers<wbr>Settings<wbr>Scope<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1093,7 @@ The following state arguments are supported:
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Activity feed message, Message will appear in the activity feed of pull requests with automatically added reviewers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1102,7 @@ The following state arguments are supported:
 <a href="#path_filters_python" style="color: inherit; text-decoration: inherit;">path_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths. Example: /WebApp/Models/Data.cs, /WebApp/* or *.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1111,7 @@ The following state arguments are supported:
 <a href="#submitter_can_vote_python" style="color: inherit; text-decoration: inherit;">submitter_<wbr>can_<wbr>vote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1162,7 +1188,7 @@ The following state arguments are supported:
 <a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1197,7 @@ The following state arguments are supported:
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1206,7 @@ The following state arguments are supported:
 <a href="#repositoryref_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
 {{% /md %}}</dd></dl>
@@ -1193,7 +1219,7 @@ The following state arguments are supported:
 <a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1228,7 @@ The following state arguments are supported:
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1237,7 @@ The following state arguments are supported:
 <a href="#repository_ref_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
 {{% /md %}}</dd></dl>
