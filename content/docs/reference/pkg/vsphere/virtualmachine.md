@@ -18,93 +18,19 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineCdromArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineCloneArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineDiskArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOvfDeployArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineVappArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCdromArgs]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCloneArgs]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineDiskArgs]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOvfDeployArgs]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,32 +65,22 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -173,7 +89,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -197,7 +113,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1726,7 +1642,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 <a href="#resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
@@ -1738,7 +1654,7 @@ for details on changing this value.
 <a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
@@ -1748,7 +1664,7 @@ when `guest_id` is `other` or `other-64`.
 <a href="#annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
@@ -1758,7 +1674,7 @@ The default is no annotation.
 <a href="#bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
@@ -1768,7 +1684,7 @@ the boot sequence. The default is no delay.
 <a href="#bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
@@ -1779,7 +1695,7 @@ Default: `10000` (10 seconds).
 <a href="#bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
@@ -1790,7 +1706,7 @@ Default: `false`.
 <a href="#cdrom_nodejs" style="color: inherit; text-decoration: inherit;">cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Cdrom<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -1800,7 +1716,7 @@ machine. See CDROM options below.
 <a href="#clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -1812,7 +1728,7 @@ template for more details.
 <a href="#cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
@@ -1822,7 +1738,7 @@ machine while it is running.
 <a href="#cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
@@ -1832,7 +1748,7 @@ virtual machine while it is running.
 <a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
@@ -1843,7 +1759,7 @@ limit.
 <a href="#cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
@@ -1853,7 +1769,7 @@ counters on this virtual machine. Default: `false`.
 <a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
@@ -1863,7 +1779,7 @@ machine is guaranteed. The default is no reservation.
 <a href="#cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
@@ -1873,7 +1789,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 <a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -1883,7 +1799,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
@@ -1893,7 +1809,7 @@ value strings to set for virtual machine.
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
@@ -1903,7 +1819,7 @@ an ovf template.
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -1916,7 +1832,7 @@ migration for details on changing this value.
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -1926,7 +1842,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">pulumi<wbr>Input<pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -1936,7 +1852,7 @@ machine. See disk options below.
 <a href="#efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
@@ -1946,7 +1862,7 @@ machine. See disk options below.
 <a href="#enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
@@ -1956,7 +1872,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
@@ -1966,7 +1882,7 @@ log file stored in the virtual machine directory. Default: `false`.
 <a href="#eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
@@ -1977,7 +1893,7 @@ Default: `automatic`.
 <a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
@@ -1988,7 +1904,7 @@ configuration, such as instance metadata.
 <a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
@@ -1998,7 +1914,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
@@ -2008,7 +1924,7 @@ relative to the datacenter that the resource pool is in.
 <a href="#forcepoweroff_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Power<wbr>Off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
@@ -2020,7 +1936,7 @@ the virtual machine. Default: `true`.
 <a href="#guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
@@ -2030,7 +1946,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 <a href="#hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
@@ -2042,7 +1958,7 @@ more details.
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -2056,7 +1972,7 @@ according to any defaults or DRS policies in place.
 <a href="#hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
@@ -2067,7 +1983,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 <a href="#idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -2078,7 +1994,7 @@ controllers.
 <a href="#ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
@@ -2090,7 +2006,7 @@ waiter will continue to wait for a real IP address. Default: [].
 <a href="#latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -2103,7 +2019,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
@@ -2113,7 +2029,7 @@ Default: `1024` (1 GB).
 <a href="#memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
@@ -2123,7 +2039,7 @@ virtual machine while it is running.
 <a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
@@ -2134,7 +2050,7 @@ is no limit.
 <a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
@@ -2144,7 +2060,7 @@ virtual machine is guaranteed. The default is no reservation.
 <a href="#memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
@@ -2154,7 +2070,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 <a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -2164,7 +2080,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#migratewaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
@@ -2176,7 +2092,7 @@ migration.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -2186,7 +2102,7 @@ using `attach`. Required if not using `label`.
 <a href="#nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
@@ -2197,7 +2113,7 @@ Default: `false`.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">pulumi<wbr>Input<pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -2208,7 +2124,7 @@ below.
 <a href="#numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
@@ -2220,7 +2136,7 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 <a href="#numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
@@ -2230,7 +2146,7 @@ to this virtual machine. Default: `1`.
 <a href="#ovfdeploy_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -2241,7 +2157,7 @@ ovf/ova template for more details.
 <a href="#pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
@@ -2251,7 +2167,7 @@ passthroughs for.
 <a href="#powerontimeout_nodejs" style="color: inherit; text-decoration: inherit;">poweron<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2176,7 @@ passthroughs for.
 <a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
@@ -2270,7 +2186,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 <a href="#runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
@@ -2280,7 +2196,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 <a href="#runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
@@ -2290,7 +2206,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 <a href="#runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
@@ -2300,7 +2216,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 <a href="#runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
@@ -2310,7 +2226,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 <a href="#satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -2321,7 +2237,7 @@ controllers.
 <a href="#scsibussharing_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Bus<wbr>Sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
@@ -2331,7 +2247,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 <a href="#scsicontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
@@ -2343,7 +2259,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 <a href="#scsitype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
@@ -2354,7 +2270,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 <a href="#shutdownwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
@@ -2366,7 +2282,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2291,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
@@ -2386,7 +2302,7 @@ Default: `inherit`.
 <a href="#synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
@@ -2396,7 +2312,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2321,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Vapp<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -2418,7 +2334,7 @@ more details.
 <a href="#waitforguestiptimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -2431,7 +2347,7 @@ used. A value less than 1 disables the waiter. Default: 0.
 <a href="#waitforguestnetroutable_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -2445,7 +2361,7 @@ waiter is used. Default: `true`.
 <a href="#waitforguestnettimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -2463,7 +2379,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 <a href="#resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
@@ -2475,7 +2391,7 @@ for details on changing this value.
 <a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
@@ -2485,7 +2401,7 @@ when `guest_id` is `other` or `other-64`.
 <a href="#annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
@@ -2495,7 +2411,7 @@ The default is no annotation.
 <a href="#boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
@@ -2505,7 +2421,7 @@ the boot sequence. The default is no delay.
 <a href="#boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
@@ -2516,7 +2432,7 @@ Default: `10000` (10 seconds).
 <a href="#boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
@@ -2527,7 +2443,7 @@ Default: `false`.
 <a href="#cdrom_python" style="color: inherit; text-decoration: inherit;">cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Input[Virtual<wbr>Machine<wbr>Cdrom<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -2537,7 +2453,7 @@ machine. See CDROM options below.
 <a href="#clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -2549,7 +2465,7 @@ template for more details.
 <a href="#cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
@@ -2559,7 +2475,7 @@ machine while it is running.
 <a href="#cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
@@ -2569,7 +2485,7 @@ virtual machine while it is running.
 <a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
@@ -2580,7 +2496,7 @@ limit.
 <a href="#cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
@@ -2590,7 +2506,7 @@ counters on this virtual machine. Default: `false`.
 <a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
@@ -2600,7 +2516,7 @@ machine is guaranteed. The default is no reservation.
 <a href="#cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
@@ -2610,7 +2526,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 <a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -2620,7 +2536,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
@@ -2630,7 +2546,7 @@ value strings to set for virtual machine.
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
@@ -2640,7 +2556,7 @@ an ovf template.
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -2653,7 +2569,7 @@ migration for details on changing this value.
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -2663,7 +2579,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">Input[Virtual<wbr>Machine<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Sequence[Virtual<wbr>Machine<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -2673,7 +2589,7 @@ machine. See disk options below.
 <a href="#efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
@@ -2683,7 +2599,7 @@ machine. See disk options below.
 <a href="#enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
@@ -2693,7 +2609,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
@@ -2703,7 +2619,7 @@ log file stored in the virtual machine directory. Default: `false`.
 <a href="#ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
@@ -2714,7 +2630,7 @@ Default: `automatic`.
 <a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
@@ -2725,7 +2641,7 @@ configuration, such as instance metadata.
 <a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
@@ -2735,7 +2651,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
@@ -2745,7 +2661,7 @@ relative to the datacenter that the resource pool is in.
 <a href="#force_power_off_python" style="color: inherit; text-decoration: inherit;">force_<wbr>power_<wbr>off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
@@ -2757,7 +2673,7 @@ the virtual machine. Default: `true`.
 <a href="#guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
@@ -2767,7 +2683,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 <a href="#hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
@@ -2779,7 +2695,7 @@ more details.
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -2793,7 +2709,7 @@ according to any defaults or DRS policies in place.
 <a href="#hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
@@ -2804,7 +2720,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 <a href="#ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -2815,7 +2731,7 @@ controllers.
 <a href="#ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
@@ -2827,7 +2743,7 @@ waiter will continue to wait for a real IP address. Default: [].
 <a href="#latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -2840,7 +2756,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
@@ -2850,7 +2766,7 @@ Default: `1024` (1 GB).
 <a href="#memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
@@ -2860,7 +2776,7 @@ virtual machine while it is running.
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
@@ -2871,7 +2787,7 @@ is no limit.
 <a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
@@ -2881,7 +2797,7 @@ virtual machine is guaranteed. The default is no reservation.
 <a href="#memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
@@ -2891,7 +2807,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 <a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -2901,7 +2817,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#migrate_wait_timeout_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
@@ -2913,7 +2829,7 @@ migration.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -2923,7 +2839,7 @@ using `attach`. Required if not using `label`.
 <a href="#nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
@@ -2934,7 +2850,7 @@ Default: `false`.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">Input[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -2945,7 +2861,7 @@ below.
 <a href="#num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
@@ -2957,7 +2873,7 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 <a href="#num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
@@ -2967,7 +2883,7 @@ to this virtual machine. Default: `1`.
 <a href="#ovf_deploy_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Input[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -2978,7 +2894,7 @@ ovf/ova template for more details.
 <a href="#pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
@@ -2988,7 +2904,7 @@ passthroughs for.
 <a href="#poweron_timeout_python" style="color: inherit; text-decoration: inherit;">poweron_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd><dt class="property-optional"
@@ -2997,7 +2913,7 @@ passthroughs for.
 <a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
@@ -3007,7 +2923,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 <a href="#run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
@@ -3017,7 +2933,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 <a href="#run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
@@ -3027,7 +2943,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 <a href="#run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
@@ -3037,7 +2953,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 <a href="#run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
@@ -3047,7 +2963,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 <a href="#sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -3058,7 +2974,7 @@ controllers.
 <a href="#scsi_bus_sharing_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>bus_<wbr>sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
@@ -3068,7 +2984,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 <a href="#scsi_controller_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
@@ -3080,7 +2996,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 <a href="#scsi_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
@@ -3091,7 +3007,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 <a href="#shutdown_wait_timeout_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
@@ -3103,7 +3019,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3028,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
@@ -3123,7 +3039,7 @@ Default: `inherit`.
 <a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
@@ -3133,7 +3049,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3142,7 +3058,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Input[Virtual<wbr>Machine<wbr>Vapp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -3155,7 +3071,7 @@ more details.
 <a href="#wait_for_guest_ip_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>ip_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -3168,7 +3084,7 @@ used. A value less than 1 disables the waiter. Default: 0.
 <a href="#wait_for_guest_net_routable_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>routable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -3182,7 +3098,7 @@ waiter is used. Default: `true`.
 <a href="#wait_for_guest_net_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -3704,100 +3620,20 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineCdromArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">change_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineCloneArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">guest_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">imported</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">moid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualMachineNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineOvfDeployArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">reboot_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineVappArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">vapp_transports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vmware_tools_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vmx_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCdromArgs]</span> = None<span class="p">, </span><span class="nx">change_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCloneArgs]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineDiskArgs]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">imported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">moid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOvfDeployArgs]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">reboot_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">, </span><span class="nx">vapp_transports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vmware_tools_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vmx_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5604,7 +5440,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 <a href="#state_alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
@@ -5614,7 +5450,7 @@ when `guest_id` is `other` or `other-64`.
 <a href="#state_annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
@@ -5624,7 +5460,7 @@ The default is no annotation.
 <a href="#state_bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
@@ -5634,7 +5470,7 @@ the boot sequence. The default is no delay.
 <a href="#state_bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
@@ -5645,7 +5481,7 @@ Default: `10000` (10 seconds).
 <a href="#state_bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
@@ -5656,7 +5492,7 @@ Default: `false`.
 <a href="#state_cdrom_nodejs" style="color: inherit; text-decoration: inherit;">cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Cdrom<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -5666,7 +5502,7 @@ machine. See CDROM options below.
 <a href="#state_changeversion_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
@@ -5677,7 +5513,7 @@ configuration.
 <a href="#state_clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -5689,7 +5525,7 @@ template for more details.
 <a href="#state_cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
@@ -5699,7 +5535,7 @@ machine while it is running.
 <a href="#state_cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
@@ -5709,7 +5545,7 @@ virtual machine while it is running.
 <a href="#state_cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
@@ -5720,7 +5556,7 @@ limit.
 <a href="#state_cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
@@ -5730,7 +5566,7 @@ counters on this virtual machine. Default: `false`.
 <a href="#state_cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
@@ -5740,7 +5576,7 @@ machine is guaranteed. The default is no reservation.
 <a href="#state_cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
@@ -5750,7 +5586,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 <a href="#state_cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -5760,7 +5596,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
@@ -5770,7 +5606,7 @@ value strings to set for virtual machine.
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
@@ -5780,7 +5616,7 @@ an ovf template.
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -5793,7 +5629,7 @@ migration for details on changing this value.
 <a href="#state_datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -5803,7 +5639,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#state_defaultipaddress_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -5818,7 +5654,7 @@ off, this value will be blank.
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">pulumi<wbr>Input<pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -5828,7 +5664,7 @@ machine. See disk options below.
 <a href="#state_efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
@@ -5838,7 +5674,7 @@ machine. See disk options below.
 <a href="#state_enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
@@ -5848,7 +5684,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
@@ -5858,7 +5694,7 @@ log file stored in the virtual machine directory. Default: `false`.
 <a href="#state_eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
@@ -5869,7 +5705,7 @@ Default: `automatic`.
 <a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
@@ -5880,7 +5716,7 @@ configuration, such as instance metadata.
 <a href="#state_firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
@@ -5890,7 +5726,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
@@ -5900,7 +5736,7 @@ relative to the datacenter that the resource pool is in.
 <a href="#state_forcepoweroff_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Power<wbr>Off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
@@ -5912,7 +5748,7 @@ the virtual machine. Default: `true`.
 <a href="#state_guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
@@ -5922,7 +5758,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 <a href="#state_guestipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -5935,7 +5771,7 @@ virtual machine.
 <a href="#state_hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
@@ -5947,7 +5783,7 @@ more details.
 <a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -5961,7 +5797,7 @@ according to any defaults or DRS policies in place.
 <a href="#state_hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
@@ -5972,7 +5808,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 <a href="#state_idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -5983,7 +5819,7 @@ controllers.
 <a href="#state_ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
@@ -5995,7 +5831,7 @@ waiter will continue to wait for a real IP address. Default: [].
 <a href="#state_imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
@@ -6007,7 +5843,7 @@ section on importing below.
 <a href="#state_latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -6020,7 +5856,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
@@ -6030,7 +5866,7 @@ Default: `1024` (1 GB).
 <a href="#state_memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
@@ -6040,7 +5876,7 @@ virtual machine while it is running.
 <a href="#state_memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
@@ -6051,7 +5887,7 @@ is no limit.
 <a href="#state_memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
@@ -6061,7 +5897,7 @@ virtual machine is guaranteed. The default is no reservation.
 <a href="#state_memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
@@ -6071,7 +5907,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 <a href="#state_memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -6081,7 +5917,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#state_migratewaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
@@ -6093,7 +5929,7 @@ migration.
 <a href="#state_moid_nodejs" style="color: inherit; text-decoration: inherit;">moid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd><dt class="property-optional"
@@ -6102,7 +5938,7 @@ migration.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -6112,7 +5948,7 @@ using `attach`. Required if not using `label`.
 <a href="#state_nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
@@ -6123,7 +5959,7 @@ Default: `false`.
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">pulumi<wbr>Input<pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -6134,7 +5970,7 @@ below.
 <a href="#state_numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
@@ -6146,7 +5982,7 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 <a href="#state_numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
@@ -6156,7 +5992,7 @@ to this virtual machine. Default: `1`.
 <a href="#state_ovfdeploy_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -6167,7 +6003,7 @@ ovf/ova template for more details.
 <a href="#state_pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
@@ -6177,7 +6013,7 @@ passthroughs for.
 <a href="#state_powerontimeout_nodejs" style="color: inherit; text-decoration: inherit;">poweron<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd><dt class="property-optional"
@@ -6186,7 +6022,7 @@ passthroughs for.
 <a href="#state_rebootrequired_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
@@ -6197,7 +6033,7 @@ an update process and gets reset on refresh.
 <a href="#state_resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
@@ -6209,7 +6045,7 @@ for details on changing this value.
 <a href="#state_runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
@@ -6219,7 +6055,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 <a href="#state_runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
@@ -6229,7 +6065,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 <a href="#state_runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
@@ -6239,7 +6075,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 <a href="#state_runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
@@ -6249,7 +6085,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 <a href="#state_runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
@@ -6259,7 +6095,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 <a href="#state_satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -6270,7 +6106,7 @@ controllers.
 <a href="#state_scsibussharing_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Bus<wbr>Sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
@@ -6280,7 +6116,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 <a href="#state_scsicontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
@@ -6292,7 +6128,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 <a href="#state_scsitype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
@@ -6303,7 +6139,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 <a href="#state_shutdownwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
@@ -6315,7 +6151,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#state_storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6324,7 +6160,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#state_swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
@@ -6335,7 +6171,7 @@ Default: `inherit`.
 <a href="#state_synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
@@ -6345,7 +6181,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6354,7 +6190,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#state_uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
@@ -6364,7 +6200,7 @@ virtual disk on the virtual machine.
 <a href="#state_vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Vapp<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -6377,7 +6213,7 @@ more details.
 <a href="#state_vapptransports_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
@@ -6388,7 +6224,7 @@ machine or template.
 <a href="#state_vmwaretoolsstatus_nodejs" style="color: inherit; text-decoration: inherit;">vmware<wbr>Tools<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
@@ -6398,7 +6234,7 @@ determine the proper course of action for some device operations.
 <a href="#state_vmxpath_nodejs" style="color: inherit; text-decoration: inherit;">vmx<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
@@ -6408,7 +6244,7 @@ datastore.
 <a href="#state_waitforguestiptimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -6421,7 +6257,7 @@ used. A value less than 1 disables the waiter. Default: 0.
 <a href="#state_waitforguestnetroutable_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -6435,7 +6271,7 @@ waiter is used. Default: `true`.
 <a href="#state_waitforguestnettimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -6453,7 +6289,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 <a href="#state_alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
@@ -6463,7 +6299,7 @@ when `guest_id` is `other` or `other-64`.
 <a href="#state_annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
@@ -6473,7 +6309,7 @@ The default is no annotation.
 <a href="#state_boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
@@ -6483,7 +6319,7 @@ the boot sequence. The default is no delay.
 <a href="#state_boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
@@ -6494,7 +6330,7 @@ Default: `10000` (10 seconds).
 <a href="#state_boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
@@ -6505,7 +6341,7 @@ Default: `false`.
 <a href="#state_cdrom_python" style="color: inherit; text-decoration: inherit;">cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Input[Virtual<wbr>Machine<wbr>Cdrom<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -6515,7 +6351,7 @@ machine. See CDROM options below.
 <a href="#state_change_version_python" style="color: inherit; text-decoration: inherit;">change_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
@@ -6526,7 +6362,7 @@ configuration.
 <a href="#state_clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -6538,7 +6374,7 @@ template for more details.
 <a href="#state_cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
@@ -6548,7 +6384,7 @@ machine while it is running.
 <a href="#state_cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
@@ -6558,7 +6394,7 @@ virtual machine while it is running.
 <a href="#state_cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
@@ -6569,7 +6405,7 @@ limit.
 <a href="#state_cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
@@ -6579,7 +6415,7 @@ counters on this virtual machine. Default: `false`.
 <a href="#state_cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
@@ -6589,7 +6425,7 @@ machine is guaranteed. The default is no reservation.
 <a href="#state_cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
@@ -6599,7 +6435,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 <a href="#state_cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -6609,7 +6445,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
@@ -6619,7 +6455,7 @@ value strings to set for virtual machine.
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
@@ -6629,7 +6465,7 @@ an ovf template.
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -6642,7 +6478,7 @@ migration for details on changing this value.
 <a href="#state_datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -6652,7 +6488,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#state_default_ip_address_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -6667,7 +6503,7 @@ off, this value will be blank.
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">Input[Virtual<wbr>Machine<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Sequence[Virtual<wbr>Machine<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -6677,7 +6513,7 @@ machine. See disk options below.
 <a href="#state_efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
@@ -6687,7 +6523,7 @@ machine. See disk options below.
 <a href="#state_enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
@@ -6697,7 +6533,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
@@ -6707,7 +6543,7 @@ log file stored in the virtual machine directory. Default: `false`.
 <a href="#state_ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
@@ -6718,7 +6554,7 @@ Default: `automatic`.
 <a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
@@ -6729,7 +6565,7 @@ configuration, such as instance metadata.
 <a href="#state_firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
@@ -6739,7 +6575,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
@@ -6749,7 +6585,7 @@ relative to the datacenter that the resource pool is in.
 <a href="#state_force_power_off_python" style="color: inherit; text-decoration: inherit;">force_<wbr>power_<wbr>off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
@@ -6761,7 +6597,7 @@ the virtual machine. Default: `true`.
 <a href="#state_guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
@@ -6771,7 +6607,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 <a href="#state_guest_ip_addresses_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -6784,7 +6620,7 @@ virtual machine.
 <a href="#state_hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
@@ -6796,7 +6632,7 @@ more details.
 <a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -6810,7 +6646,7 @@ according to any defaults or DRS policies in place.
 <a href="#state_hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
@@ -6821,7 +6657,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 <a href="#state_ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -6832,7 +6668,7 @@ controllers.
 <a href="#state_ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
@@ -6844,7 +6680,7 @@ waiter will continue to wait for a real IP address. Default: [].
 <a href="#state_imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
@@ -6856,7 +6692,7 @@ section on importing below.
 <a href="#state_latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -6869,7 +6705,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
@@ -6879,7 +6715,7 @@ Default: `1024` (1 GB).
 <a href="#state_memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
@@ -6889,7 +6725,7 @@ virtual machine while it is running.
 <a href="#state_memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
@@ -6900,7 +6736,7 @@ is no limit.
 <a href="#state_memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
@@ -6910,7 +6746,7 @@ virtual machine is guaranteed. The default is no reservation.
 <a href="#state_memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
@@ -6920,7 +6756,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 <a href="#state_memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
@@ -6930,7 +6766,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 <a href="#state_migrate_wait_timeout_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
@@ -6942,7 +6778,7 @@ migration.
 <a href="#state_moid_python" style="color: inherit; text-decoration: inherit;">moid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd><dt class="property-optional"
@@ -6951,7 +6787,7 @@ migration.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -6961,7 +6797,7 @@ using `attach`. Required if not using `label`.
 <a href="#state_nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
@@ -6972,7 +6808,7 @@ Default: `false`.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">Input[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -6983,7 +6819,7 @@ below.
 <a href="#state_num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
@@ -6995,7 +6831,7 @@ supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 <a href="#state_num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
@@ -7005,7 +6841,7 @@ to this virtual machine. Default: `1`.
 <a href="#state_ovf_deploy_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Input[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -7016,7 +6852,7 @@ ovf/ova template for more details.
 <a href="#state_pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
@@ -7026,7 +6862,7 @@ passthroughs for.
 <a href="#state_poweron_timeout_python" style="color: inherit; text-decoration: inherit;">poweron_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd><dt class="property-optional"
@@ -7035,7 +6871,7 @@ passthroughs for.
 <a href="#state_reboot_required_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
@@ -7046,7 +6882,7 @@ an update process and gets reset on refresh.
 <a href="#state_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
@@ -7058,7 +6894,7 @@ for details on changing this value.
 <a href="#state_run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
@@ -7068,7 +6904,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 <a href="#state_run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
@@ -7078,7 +6914,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 <a href="#state_run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
@@ -7088,7 +6924,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 <a href="#state_run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
@@ -7098,7 +6934,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 <a href="#state_run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
@@ -7108,7 +6944,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 <a href="#state_sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
@@ -7119,7 +6955,7 @@ controllers.
 <a href="#state_scsi_bus_sharing_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>bus_<wbr>sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
@@ -7129,7 +6965,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 <a href="#state_scsi_controller_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
@@ -7141,7 +6977,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 <a href="#state_scsi_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
@@ -7152,7 +6988,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 <a href="#state_shutdown_wait_timeout_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
@@ -7164,7 +7000,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#state_storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7173,7 +7009,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 <a href="#state_swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
@@ -7184,7 +7020,7 @@ Default: `inherit`.
 <a href="#state_sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
@@ -7194,7 +7030,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7203,7 +7039,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#state_uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
@@ -7213,7 +7049,7 @@ virtual disk on the virtual machine.
 <a href="#state_vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Input[Virtual<wbr>Machine<wbr>Vapp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -7226,7 +7062,7 @@ more details.
 <a href="#state_vapp_transports_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
@@ -7237,7 +7073,7 @@ machine or template.
 <a href="#state_vmware_tools_status_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>tools_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
@@ -7247,7 +7083,7 @@ determine the proper course of action for some device operations.
 <a href="#state_vmx_path_python" style="color: inherit; text-decoration: inherit;">vmx_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
@@ -7257,7 +7093,7 @@ datastore.
 <a href="#state_wait_for_guest_ip_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>ip_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -7270,7 +7106,7 @@ used. A value less than 1 disables the waiter. Default: 0.
 <a href="#state_wait_for_guest_net_routable_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>routable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -7284,7 +7120,7 @@ waiter is used. Default: `true`.
 <a href="#state_wait_for_guest_net_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -7423,7 +7259,7 @@ ISO. Conflicts with `client_device`.
 <a href="#clientdevice_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
@@ -7433,7 +7269,7 @@ remote client device. Conflicts with `datastore_id` and `path`.
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -7443,7 +7279,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -7455,7 +7291,7 @@ unit 1 on SCSI bus 0.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7464,7 +7300,7 @@ unit 1 on SCSI bus 0.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
@@ -7478,7 +7314,7 @@ ISO. Conflicts with `client_device`.
 <a href="#client_device_python" style="color: inherit; text-decoration: inherit;">client_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
@@ -7488,7 +7324,7 @@ remote client device. Conflicts with `datastore_id` and `path`.
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -7498,7 +7334,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -7510,7 +7346,7 @@ unit 1 on SCSI bus 0.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7519,7 +7355,7 @@ unit 1 on SCSI bus 0.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
@@ -7639,7 +7475,7 @@ ISO. Conflicts with `client_device`.
 <a href="#templateuuid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7647,7 +7483,7 @@ ISO. Conflicts with `client_device`.
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7655,7 +7491,7 @@ ISO. Conflicts with `client_device`.
 <a href="#linkedclone_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7663,7 +7499,7 @@ ISO. Conflicts with `client_device`.
 <a href="#ovfnetworkmap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7671,7 +7507,7 @@ ISO. Conflicts with `client_device`.
 <a href="#ovfstoragemap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Storage<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7679,7 +7515,7 @@ ISO. Conflicts with `client_device`.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7691,7 +7527,7 @@ ISO. Conflicts with `client_device`.
 <a href="#template_uuid_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7699,7 +7535,7 @@ ISO. Conflicts with `client_device`.
 <a href="#customize_python" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7707,7 +7543,7 @@ ISO. Conflicts with `client_device`.
 <a href="#linked_clone_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7715,7 +7551,7 @@ ISO. Conflicts with `client_device`.
 <a href="#ovf_network_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>network_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7723,7 +7559,7 @@ ISO. Conflicts with `client_device`.
 <a href="#ovf_storage_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>storage_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7731,7 +7567,7 @@ ISO. Conflicts with `client_device`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7903,7 +7739,7 @@ below.
 <a href="#dnsserverlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7911,7 +7747,7 @@ below.
 <a href="#dnssuffixlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7919,7 +7755,7 @@ below.
 <a href="#ipv4gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7927,7 +7763,7 @@ below.
 <a href="#ipv6gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7935,7 +7771,7 @@ below.
 <a href="#linuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7943,7 +7779,7 @@ below.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">pulumi<wbr>Input<pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -7954,7 +7790,7 @@ below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7962,7 +7798,7 @@ below.
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">pulumi<wbr>Input<Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7970,7 +7806,7 @@ below.
 <a href="#windowssyspreptext_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Sysprep<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7982,7 +7818,7 @@ below.
 <a href="#dns_server_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7990,7 +7826,7 @@ below.
 <a href="#dns_suffix_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>suffix_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7998,7 +7834,7 @@ below.
 <a href="#ipv4_gateway_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8006,7 +7842,7 @@ below.
 <a href="#ipv6_gateway_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8014,7 +7850,7 @@ below.
 <a href="#linux_options_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8022,7 +7858,7 @@ below.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -8033,7 +7869,7 @@ below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8041,7 +7877,7 @@ below.
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Input[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8049,7 +7885,7 @@ below.
 <a href="#windows_sysprep_text_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>sysprep_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8135,7 +7971,7 @@ below.
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8143,7 +7979,7 @@ below.
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8151,7 +7987,7 @@ below.
 <a href="#hwclockutc_nodejs" style="color: inherit; text-decoration: inherit;">hw<wbr>Clock<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8159,7 +7995,7 @@ below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8171,7 +8007,7 @@ below.
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8179,7 +8015,7 @@ below.
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8187,7 +8023,7 @@ below.
 <a href="#hw_clock_utc_python" style="color: inherit; text-decoration: inherit;">hw_<wbr>clock_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8195,7 +8031,7 @@ below.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8313,7 +8149,7 @@ below.
 <a href="#dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8321,7 +8157,7 @@ below.
 <a href="#dnsserverlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8329,7 +8165,7 @@ below.
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8337,7 +8173,7 @@ below.
 <a href="#ipv4netmask_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8345,7 +8181,7 @@ below.
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8353,7 +8189,7 @@ below.
 <a href="#ipv6netmask_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8365,7 +8201,7 @@ below.
 <a href="#dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8373,7 +8209,7 @@ below.
 <a href="#dns_server_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8381,7 +8217,7 @@ below.
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8389,7 +8225,7 @@ below.
 <a href="#ipv4_netmask_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8397,7 +8233,7 @@ below.
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8405,7 +8241,7 @@ below.
 <a href="#ipv6_netmask_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8635,7 +8471,7 @@ below.
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8643,7 +8479,7 @@ below.
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8651,7 +8487,7 @@ below.
 <a href="#autologon_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8659,7 +8495,7 @@ below.
 <a href="#autologoncount_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8667,7 +8503,7 @@ below.
 <a href="#domainadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8675,7 +8511,7 @@ below.
 <a href="#domainadminuser_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8683,7 +8519,7 @@ below.
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8691,7 +8527,7 @@ below.
 <a href="#joindomain_nodejs" style="color: inherit; text-decoration: inherit;">join<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8699,7 +8535,7 @@ below.
 <a href="#organizationname_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8707,7 +8543,7 @@ below.
 <a href="#productkey_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8715,7 +8551,7 @@ below.
 <a href="#runoncecommandlists_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Once<wbr>Command<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8723,7 +8559,7 @@ below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8731,7 +8567,7 @@ below.
 <a href="#workgroup_nodejs" style="color: inherit; text-decoration: inherit;">workgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8743,7 +8579,7 @@ below.
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8751,7 +8587,7 @@ below.
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8759,7 +8595,7 @@ below.
 <a href="#auto_logon_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>logon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8767,7 +8603,7 @@ below.
 <a href="#auto_logon_count_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>logon_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8775,7 +8611,7 @@ below.
 <a href="#domain_admin_password_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8783,7 +8619,7 @@ below.
 <a href="#domain_admin_user_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8791,7 +8627,7 @@ below.
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8799,7 +8635,7 @@ below.
 <a href="#join_domain_python" style="color: inherit; text-decoration: inherit;">join_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8807,7 +8643,7 @@ below.
 <a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8815,7 +8651,7 @@ below.
 <a href="#product_key_python" style="color: inherit; text-decoration: inherit;">product_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8823,7 +8659,7 @@ below.
 <a href="#run_once_command_lists_python" style="color: inherit; text-decoration: inherit;">run_<wbr>once_<wbr>command_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8831,7 +8667,7 @@ below.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8839,7 +8675,7 @@ below.
 <a href="#workgroup_python" style="color: inherit; text-decoration: inherit;">workgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9343,7 +9179,7 @@ directly to the filesystem immediately instead of being buffered. Default:
 <a href="#attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
@@ -9354,7 +9190,7 @@ Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 <a href="#controllertype_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
@@ -9365,7 +9201,7 @@ number of controllers enabled for the selected type. Default `scsi`.
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -9375,7 +9211,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -9387,7 +9223,7 @@ unit 1 on SCSI bus 0.
 <a href="#diskmode_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -9400,7 +9236,7 @@ Default: `persistent`. For an explanation of options, click
 <a href="#disksharing_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
@@ -9410,7 +9246,7 @@ of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 <a href="#eagerlyscrub_nodejs" style="color: inherit; text-decoration: inherit;">eagerly<wbr>Scrub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
@@ -9422,7 +9258,7 @@ on picking a disk type.  Default: `false`.
 <a href="#iolimit_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
@@ -9432,7 +9268,7 @@ default is no limit.
 <a href="#ioreservation_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
@@ -9442,7 +9278,7 @@ has, in IOPS.  The default is no reservation.
 <a href="#iosharecount_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
@@ -9452,7 +9288,7 @@ level is `custom`.
 <a href="#iosharelevel_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
@@ -9462,7 +9298,7 @@ be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 <a href="#keeponremove_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>On<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
@@ -9472,7 +9308,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9481,7 +9317,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -9490,7 +9326,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -9510,7 +9346,7 @@ https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
@@ -9520,7 +9356,7 @@ ISO. Conflicts with `client_device`.
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9529,7 +9365,7 @@ ISO. Conflicts with `client_device`.
 <a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9538,7 +9374,7 @@ ISO. Conflicts with `client_device`.
 <a href="#thinprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">thin<wbr>Provisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
@@ -9550,7 +9386,7 @@ type. Default: `true`.
 <a href="#unitnumber_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -9563,7 +9399,7 @@ are not allowed.
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
@@ -9573,7 +9409,7 @@ virtual disk on the virtual machine.
 <a href="#writethrough_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Through</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
@@ -9588,7 +9424,7 @@ directly to the filesystem immediately instead of being buffered. Default:
 <a href="#attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
@@ -9599,7 +9435,7 @@ Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 <a href="#controller_type_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
@@ -9610,7 +9446,7 @@ number of controllers enabled for the selected type. Default `scsi`.
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
@@ -9620,7 +9456,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -9632,7 +9468,7 @@ unit 1 on SCSI bus 0.
 <a href="#disk_mode_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -9645,7 +9481,7 @@ Default: `persistent`. For an explanation of options, click
 <a href="#disk_sharing_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>sharing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
@@ -9655,7 +9491,7 @@ of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 <a href="#eagerly_scrub_python" style="color: inherit; text-decoration: inherit;">eagerly_<wbr>scrub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
@@ -9667,7 +9503,7 @@ on picking a disk type.  Default: `false`.
 <a href="#io_limit_python" style="color: inherit; text-decoration: inherit;">io_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
@@ -9677,7 +9513,7 @@ default is no limit.
 <a href="#io_reservation_python" style="color: inherit; text-decoration: inherit;">io_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
@@ -9687,7 +9523,7 @@ has, in IOPS.  The default is no reservation.
 <a href="#io_share_count_python" style="color: inherit; text-decoration: inherit;">io_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
@@ -9697,7 +9533,7 @@ level is `custom`.
 <a href="#io_share_level_python" style="color: inherit; text-decoration: inherit;">io_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
@@ -9707,7 +9543,7 @@ be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 <a href="#keep_on_remove_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>on_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
@@ -9717,7 +9553,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9726,7 +9562,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -9735,7 +9571,7 @@ destroying the virtual machine. Default: `false`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -9755,7 +9591,7 @@ https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
@@ -9765,7 +9601,7 @@ ISO. Conflicts with `client_device`.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9774,7 +9610,7 @@ ISO. Conflicts with `client_device`.
 <a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9783,7 +9619,7 @@ ISO. Conflicts with `client_device`.
 <a href="#thin_provisioned_python" style="color: inherit; text-decoration: inherit;">thin_<wbr>provisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
@@ -9795,7 +9631,7 @@ type. Default: `true`.
 <a href="#unit_number_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -9808,7 +9644,7 @@ are not allowed.
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
@@ -9818,7 +9654,7 @@ virtual disk on the virtual machine.
 <a href="#write_through_python" style="color: inherit; text-decoration: inherit;">write_<wbr>through</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
@@ -10073,7 +9909,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
@@ -10083,7 +9919,7 @@ ID of the network to connect this interface to.
 <a href="#adaptertype_nodejs" style="color: inherit; text-decoration: inherit;">adapter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
@@ -10093,7 +9929,7 @@ ID of the network to connect this interface to.
 <a href="#bandwidthlimit_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
@@ -10103,7 +9939,7 @@ interface, in Mbits/sec. The default is no limit.
 <a href="#bandwidthreservation_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
@@ -10113,7 +9949,7 @@ network interface, in Mbits/sec. The default is no reservation.
 <a href="#bandwidthsharecount_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
@@ -10123,7 +9959,7 @@ interface when the share level is `custom`.
 <a href="#bandwidthsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
@@ -10134,7 +9970,7 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -10146,7 +9982,7 @@ unit 1 on SCSI bus 0.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10155,7 +9991,7 @@ unit 1 on SCSI bus 0.
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
@@ -10166,7 +10002,7 @@ computed value that gives the current MAC address of this interface.
 <a href="#ovfmapping_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
@@ -10177,7 +10013,7 @@ from an OVF source.
 <a href="#usestaticmac_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
@@ -10192,7 +10028,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
@@ -10202,7 +10038,7 @@ ID of the network to connect this interface to.
 <a href="#adapter_type_python" style="color: inherit; text-decoration: inherit;">adapter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
@@ -10212,7 +10048,7 @@ ID of the network to connect this interface to.
 <a href="#bandwidth_limit_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
@@ -10222,7 +10058,7 @@ interface, in Mbits/sec. The default is no limit.
 <a href="#bandwidth_reservation_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
@@ -10232,7 +10068,7 @@ network interface, in Mbits/sec. The default is no reservation.
 <a href="#bandwidth_share_count_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
@@ -10242,7 +10078,7 @@ interface when the share level is `custom`.
 <a href="#bandwidth_share_level_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
@@ -10253,7 +10089,7 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 <a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
@@ -10265,7 +10101,7 @@ unit 1 on SCSI bus 0.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10274,7 +10110,7 @@ unit 1 on SCSI bus 0.
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
@@ -10285,7 +10121,7 @@ computed value that gives the current MAC address of this interface.
 <a href="#ovf_mapping_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
@@ -10296,7 +10132,7 @@ from an OVF source.
 <a href="#use_static_mac_python" style="color: inherit; text-decoration: inherit;">use_<wbr>static_<wbr>mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
@@ -10449,7 +10285,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#allowunverifiedsslcert_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10457,7 +10293,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#deploymentoption_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10465,7 +10301,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#diskprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Provisioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10473,7 +10309,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10481,7 +10317,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10489,7 +10325,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#localovfpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ovf<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10497,7 +10333,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ovfnetworkmap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10505,7 +10341,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#remoteovfurl_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ovf<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10517,7 +10353,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#allow_unverified_ssl_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unverified_<wbr>ssl_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10525,7 +10361,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#deployment_option_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10533,7 +10369,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#disk_provisioning_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>provisioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10541,7 +10377,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10549,7 +10385,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10557,7 +10393,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#local_ovf_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ovf_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10565,7 +10401,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#ovf_network_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>network_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10573,7 +10409,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#remote_ovf_url_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ovf_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10611,7 +10447,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10623,7 +10459,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

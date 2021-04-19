@@ -18,36 +18,19 @@ meta_desc: "Documentation for the vsphere.NasDatastore resource with examples, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">access_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">remote_hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">remote_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">security_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">remote_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNasDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NasDatastore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNasDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NasDatastore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NasDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NasDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -82,32 +65,22 @@ meta_desc: "Documentation for the vsphere.NasDatastore resource with examples, i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NasDatastoreArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -116,7 +89,7 @@ meta_desc: "Documentation for the vsphere.NasDatastore resource with examples, i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -140,7 +113,7 @@ meta_desc: "Documentation for the vsphere.NasDatastore resource with examples, i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -443,7 +416,7 @@ changed.
 <a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
@@ -453,7 +426,7 @@ the hosts to mount the datastore on.
 <a href="#remotehosts_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The hostnames or IP addresses of the remote
 server or servers. Only one element should be present for NFS v3 but multiple
@@ -464,7 +437,7 @@ can be present for NFS v4.1. Forces a new resource if changed.
 <a href="#remotepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote path of the mount point. Forces a new
 resource if changed.
@@ -474,7 +447,7 @@ resource if changed.
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for the mount point. Can be one of
 `readOnly` or `readWrite`. Note that `readWrite` does not necessarily mean
@@ -486,7 +459,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value strings to set on datasource resource.
@@ -496,7 +469,7 @@ value strings to set on datasource resource.
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
@@ -507,7 +480,7 @@ Conflicts with `folder`.
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore in.
 This is a path relative to the datacenter you are deploying the datastore to.
@@ -522,7 +495,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
@@ -532,7 +505,7 @@ changed.
 <a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security type to use when using NFS v4.1.
 Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
@@ -543,7 +516,7 @@ if changed.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -552,7 +525,7 @@ if changed.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of NAS volume. Can be one of `NFS` (to denote
 v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
@@ -567,7 +540,7 @@ changed.
 <a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
@@ -577,7 +550,7 @@ the hosts to mount the datastore on.
 <a href="#remote_hosts_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The hostnames or IP addresses of the remote
 server or servers. Only one element should be present for NFS v3 but multiple
@@ -588,7 +561,7 @@ can be present for NFS v4.1. Forces a new resource if changed.
 <a href="#remote_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote path of the mount point. Forces a new
 resource if changed.
@@ -598,7 +571,7 @@ resource if changed.
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access mode for the mount point. Can be one of
 `readOnly` or `readWrite`. Note that `readWrite` does not necessarily mean
@@ -610,7 +583,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value strings to set on datasource resource.
@@ -620,7 +593,7 @@ value strings to set on datasource resource.
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
@@ -631,7 +604,7 @@ Conflicts with `folder`.
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore in.
 This is a path relative to the datacenter you are deploying the datastore to.
@@ -646,7 +619,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
@@ -656,7 +629,7 @@ changed.
 <a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security type to use when using NFS v4.1.
 Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
@@ -667,7 +640,7 @@ if changed.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -676,7 +649,7 @@ if changed.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of NAS volume. Can be one of `NFS` (to denote
 v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
@@ -1051,41 +1024,20 @@ Get an existing NasDatastore resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NasDatastoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NasDatastore</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NasDatastoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NasDatastore</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">access_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">accessible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">free_space</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">maintenance_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">multiple_host_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">protocol_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">remote_hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">remote_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">uncommitted_space</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> NasDatastore</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">free_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">maintenance_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multiple_host_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">remote_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uncommitted_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NasDatastore</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNasDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NasDatastoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NasDatastore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNasDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NasDatastoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NasDatastore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NasDatastore</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NasDatastoreState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NasDatastore</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NasDatastoreState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1594,7 +1546,7 @@ potentially used by all virtual machines on this datastore.
 <a href="#state_accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access mode for the mount point. Can be one of
 `readOnly` or `readWrite`. Note that `readWrite` does not necessarily mean
@@ -1606,7 +1558,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 <a href="#state_accessible_nodejs" style="color: inherit; text-decoration: inherit;">accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
@@ -1616,7 +1568,7 @@ some other computed attributes may be out of date.
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1577,7 @@ some other computed attributes may be out of date.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value strings to set on datasource resource.
@@ -1635,7 +1587,7 @@ value strings to set on datasource resource.
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
@@ -1646,7 +1598,7 @@ Conflicts with `folder`.
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore in.
 This is a path relative to the datacenter you are deploying the datastore to.
@@ -1661,7 +1613,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#state_freespace_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1622,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
@@ -1680,7 +1632,7 @@ the hosts to mount the datastore on.
 <a href="#state_maintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1641,7 @@ the hosts to mount the datastore on.
 <a href="#state_multiplehostaccess_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Host<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
@@ -1699,7 +1651,7 @@ been configured with access to the datastore.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
@@ -1709,7 +1661,7 @@ changed.
 <a href="#state_protocolendpoint_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that this NAS volume is a protocol endpoint.
 This field is only populated if the host supports virtual datastores.
@@ -1719,7 +1671,7 @@ This field is only populated if the host supports virtual datastores.
 <a href="#state_remotehosts_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The hostnames or IP addresses of the remote
 server or servers. Only one element should be present for NFS v3 but multiple
@@ -1730,7 +1682,7 @@ can be present for NFS v4.1. Forces a new resource if changed.
 <a href="#state_remotepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote path of the mount point. Forces a new
 resource if changed.
@@ -1740,7 +1692,7 @@ resource if changed.
 <a href="#state_securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security type to use when using NFS v4.1.
 Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
@@ -1751,7 +1703,7 @@ if changed.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1760,7 +1712,7 @@ if changed.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of NAS volume. Can be one of `NFS` (to denote
 v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
@@ -1771,7 +1723,7 @@ changed.
 <a href="#state_uncommittedspace_nodejs" style="color: inherit; text-decoration: inherit;">uncommitted<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
@@ -1781,7 +1733,7 @@ potentially used by all virtual machines on this datastore.
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
 {{% /md %}}</dd></dl>
@@ -1794,7 +1746,7 @@ potentially used by all virtual machines on this datastore.
 <a href="#state_access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access mode for the mount point. Can be one of
 `readOnly` or `readWrite`. Note that `readWrite` does not necessarily mean
@@ -1806,7 +1758,7 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 <a href="#state_accessible_python" style="color: inherit; text-decoration: inherit;">accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
@@ -1816,7 +1768,7 @@ some other computed attributes may be out of date.
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1777,7 @@ some other computed attributes may be out of date.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value strings to set on datasource resource.
@@ -1835,7 +1787,7 @@ value strings to set on datasource resource.
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
@@ -1846,7 +1798,7 @@ Conflicts with `folder`.
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore in.
 This is a path relative to the datacenter you are deploying the datastore to.
@@ -1861,7 +1813,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#state_free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1822,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 <a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The managed object IDs of
 the hosts to mount the datastore on.
@@ -1880,7 +1832,7 @@ the hosts to mount the datastore on.
 <a href="#state_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1889,7 +1841,7 @@ the hosts to mount the datastore on.
 <a href="#state_multiple_host_access_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>host_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
@@ -1899,7 +1851,7 @@ been configured with access to the datastore.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
@@ -1909,7 +1861,7 @@ changed.
 <a href="#state_protocol_endpoint_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this NAS volume is a protocol endpoint.
 This field is only populated if the host supports virtual datastores.
@@ -1919,7 +1871,7 @@ This field is only populated if the host supports virtual datastores.
 <a href="#state_remote_hosts_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The hostnames or IP addresses of the remote
 server or servers. Only one element should be present for NFS v3 but multiple
@@ -1930,7 +1882,7 @@ can be present for NFS v4.1. Forces a new resource if changed.
 <a href="#state_remote_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote path of the mount point. Forces a new
 resource if changed.
@@ -1940,7 +1892,7 @@ resource if changed.
 <a href="#state_security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security type to use when using NFS v4.1.
 Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
@@ -1951,7 +1903,7 @@ if changed.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1912,7 @@ if changed.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of NAS volume. Can be one of `NFS` (to denote
 v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
@@ -1971,7 +1923,7 @@ changed.
 <a href="#state_uncommitted_space_python" style="color: inherit; text-decoration: inherit;">uncommitted_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
@@ -1981,7 +1933,7 @@ potentially used by all virtual machines on this datastore.
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
 {{% /md %}}</dd></dl>

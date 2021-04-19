@@ -18,50 +18,19 @@ meta_desc: "Documentation for the vsphere.DatastoreCluster resource with example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatastoreCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatastoreCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatastoreCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatastoreCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatastoreCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatastoreClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -96,32 +65,22 @@ meta_desc: "Documentation for the vsphere.DatastoreCluster resource with example
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DatastoreClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -130,7 +89,7 @@ meta_desc: "Documentation for the vsphere.DatastoreCluster resource with example
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -154,7 +113,7 @@ meta_desc: "Documentation for the vsphere.DatastoreCluster resource with example
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -753,7 +712,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
@@ -764,7 +723,7 @@ changed.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
@@ -776,7 +735,7 @@ for custom attributes.
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -791,7 +750,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +759,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
@@ -810,7 +769,7 @@ settings that are not exposed via the provider or the vSphere client.
 <a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
@@ -820,7 +779,7 @@ virtual machines in this datastore cluster. Default: `manual`.
 <a href="#sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
@@ -830,7 +789,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
 <a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
@@ -840,7 +799,7 @@ Default: `false`.
 <a href="#sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
@@ -852,7 +811,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 <a href="#sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
@@ -862,7 +821,7 @@ freeSpace, drs_free_space_threshold is used.
 <a href="#sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
@@ -873,7 +832,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
 <a href="#sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
@@ -883,7 +842,7 @@ automation settings when correcting I/O load imbalances.
 <a href="#sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
@@ -894,7 +853,7 @@ from this datastore. Default: `15` seconds.
 <a href="#sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
@@ -904,7 +863,7 @@ this datastore cluster. Default: `true`.
 <a href="#sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
@@ -915,7 +874,7 @@ balance the load. Default: `5` percent.
 <a href="#sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -929,7 +888,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 <a href="#sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
@@ -941,7 +900,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 <a href="#sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
@@ -953,7 +912,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 <a href="#sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
@@ -963,7 +922,7 @@ minutes. Default: `480` minutes.
 <a href="#sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
@@ -973,7 +932,7 @@ automation settings when correcting storage and VM policy violations.
 <a href="#sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
@@ -983,7 +942,7 @@ automation settings when correcting affinity rule violations.
 <a href="#sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
@@ -993,7 +952,7 @@ automation settings when correcting disk space imbalances.
 <a href="#sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +961,7 @@ automation settings when correcting disk space imbalances.
 <a href="#sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
@@ -1012,7 +971,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd></dl>
@@ -1025,7 +984,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
@@ -1036,7 +995,7 @@ changed.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
@@ -1048,7 +1007,7 @@ for custom attributes.
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -1063,7 +1022,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1031,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
@@ -1082,7 +1041,7 @@ settings that are not exposed via the provider or the vSphere client.
 <a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
@@ -1092,7 +1051,7 @@ virtual machines in this datastore cluster. Default: `manual`.
 <a href="#sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
@@ -1102,7 +1061,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
 <a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
@@ -1112,7 +1071,7 @@ Default: `false`.
 <a href="#sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
@@ -1124,7 +1083,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 <a href="#sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
@@ -1134,7 +1093,7 @@ freeSpace, drs_free_space_threshold is used.
 <a href="#sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
@@ -1145,7 +1104,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
 <a href="#sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
@@ -1155,7 +1114,7 @@ automation settings when correcting I/O load imbalances.
 <a href="#sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
@@ -1166,7 +1125,7 @@ from this datastore. Default: `15` seconds.
 <a href="#sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
@@ -1176,7 +1135,7 @@ this datastore cluster. Default: `true`.
 <a href="#sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
@@ -1187,7 +1146,7 @@ balance the load. Default: `5` percent.
 <a href="#sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -1201,7 +1160,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 <a href="#sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
@@ -1213,7 +1172,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 <a href="#sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
@@ -1225,7 +1184,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 <a href="#sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
@@ -1235,7 +1194,7 @@ minutes. Default: `480` minutes.
 <a href="#sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
@@ -1245,7 +1204,7 @@ automation settings when correcting storage and VM policy violations.
 <a href="#sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
@@ -1255,7 +1214,7 @@ automation settings when correcting affinity rule violations.
 <a href="#sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
@@ -1265,7 +1224,7 @@ automation settings when correcting disk space imbalances.
 <a href="#sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1233,7 @@ automation settings when correcting disk space imbalances.
 <a href="#sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
@@ -1284,7 +1243,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd></dl>
@@ -1353,47 +1312,20 @@ Get an existing DatastoreCluster resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DatastoreClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatastoreCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DatastoreClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DatastoreCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> DatastoreCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">sdrs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_default_intra_vm_affinity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_free_space_utilization_difference</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_io_latency_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_balance_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sdrs_io_load_imbalance_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_iops_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_percent_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_io_reservable_threshold_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_load_balance_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_policy_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_rule_enforcement_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_balance_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sdrs_space_utilization_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sdrs_vm_evacuation_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> DatastoreCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatastoreCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DatastoreClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatastoreCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDatastoreCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DatastoreClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatastoreCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatastoreCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DatastoreClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DatastoreCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DatastoreClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2046,7 +1978,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
@@ -2058,7 +1990,7 @@ for custom attributes.
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
@@ -2069,7 +2001,7 @@ changed.
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -2084,7 +2016,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2025,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#state_sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
@@ -2103,7 +2035,7 @@ settings that are not exposed via the provider or the vSphere client.
 <a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
@@ -2113,7 +2045,7 @@ virtual machines in this datastore cluster. Default: `manual`.
 <a href="#state_sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
@@ -2123,7 +2055,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
 <a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
@@ -2133,7 +2065,7 @@ Default: `false`.
 <a href="#state_sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
@@ -2145,7 +2077,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 <a href="#state_sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
@@ -2155,7 +2087,7 @@ freeSpace, drs_free_space_threshold is used.
 <a href="#state_sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
@@ -2166,7 +2098,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
 <a href="#state_sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
@@ -2176,7 +2108,7 @@ automation settings when correcting I/O load imbalances.
 <a href="#state_sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
@@ -2187,7 +2119,7 @@ from this datastore. Default: `15` seconds.
 <a href="#state_sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
@@ -2197,7 +2129,7 @@ this datastore cluster. Default: `true`.
 <a href="#state_sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
@@ -2208,7 +2140,7 @@ balance the load. Default: `5` percent.
 <a href="#state_sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -2222,7 +2154,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 <a href="#state_sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
@@ -2234,7 +2166,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 <a href="#state_sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
@@ -2246,7 +2178,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 <a href="#state_sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
@@ -2256,7 +2188,7 @@ minutes. Default: `480` minutes.
 <a href="#state_sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
@@ -2266,7 +2198,7 @@ automation settings when correcting storage and VM policy violations.
 <a href="#state_sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
@@ -2276,7 +2208,7 @@ automation settings when correcting affinity rule violations.
 <a href="#state_sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
@@ -2286,7 +2218,7 @@ automation settings when correcting disk space imbalances.
 <a href="#state_sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2227,7 @@ automation settings when correcting disk space imbalances.
 <a href="#state_sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
@@ -2305,7 +2237,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd></dl>
@@ -2318,7 +2250,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
@@ -2330,7 +2262,7 @@ for custom attributes.
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
@@ -2341,7 +2273,7 @@ changed.
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this datastore
 cluster in.  This is a path relative to the datacenter you are deploying the
@@ -2356,7 +2288,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2297,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 <a href="#state_sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
@@ -2375,7 +2307,7 @@ settings that are not exposed via the provider or the vSphere client.
 <a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
@@ -2385,7 +2317,7 @@ virtual machines in this datastore cluster. Default: `manual`.
 <a href="#state_sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
@@ -2395,7 +2327,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
 <a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
@@ -2405,7 +2337,7 @@ Default: `false`.
 <a href="#state_sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
@@ -2417,7 +2349,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 <a href="#state_sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
@@ -2427,7 +2359,7 @@ freeSpace, drs_free_space_threshold is used.
 <a href="#state_sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
@@ -2438,7 +2370,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
 <a href="#state_sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
@@ -2448,7 +2380,7 @@ automation settings when correcting I/O load imbalances.
 <a href="#state_sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
@@ -2459,7 +2391,7 @@ from this datastore. Default: `15` seconds.
 <a href="#state_sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
@@ -2469,7 +2401,7 @@ this datastore cluster. Default: `true`.
 <a href="#state_sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
@@ -2480,7 +2412,7 @@ balance the load. Default: `5` percent.
 <a href="#state_sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
@@ -2494,7 +2426,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 <a href="#state_sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
@@ -2506,7 +2438,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 <a href="#state_sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reservable IOPS
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
@@ -2518,7 +2450,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 <a href="#state_sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
@@ -2528,7 +2460,7 @@ minutes. Default: `480` minutes.
 <a href="#state_sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
@@ -2538,7 +2470,7 @@ automation settings when correcting storage and VM policy violations.
 <a href="#state_sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
@@ -2548,7 +2480,7 @@ automation settings when correcting affinity rule violations.
 <a href="#state_sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
@@ -2558,7 +2490,7 @@ automation settings when correcting disk space imbalances.
 <a href="#state_sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2499,7 @@ automation settings when correcting disk space imbalances.
 <a href="#state_sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
@@ -2577,7 +2509,7 @@ automation settings when generating recommendations for datastore evacuation.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd></dl>
