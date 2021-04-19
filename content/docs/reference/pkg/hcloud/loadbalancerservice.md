@@ -58,7 +58,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -138,19 +138,32 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerServiceHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerServiceHttpArgs]</span> = None<span class="p">, </span><span class="nx">listen_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxyprotocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">destination_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerServiceHealthCheckArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerServiceHttpArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">listen_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                        <span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">proxyprotocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancerService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancerService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancerService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LoadBalancerServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -185,22 +198,32 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -422,7 +445,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -431,7 +454,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
 {{% /md %}}</dd><dt class="property-optional"
@@ -440,7 +463,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +472,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -458,7 +481,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -467,7 +490,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#listenport_nodejs" style="color: inherit; text-decoration: inherit;">listen<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -476,7 +499,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
 {{% /md %}}</dd></dl>
@@ -489,7 +512,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -498,7 +521,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
 {{% /md %}}</dd><dt class="property-optional"
@@ -507,7 +530,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -516,7 +539,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Input[Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -525,7 +548,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">Input[Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +557,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#listen_port_python" style="color: inherit; text-decoration: inherit;">listen_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +566,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 <a href="#proxyprotocol_python" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
 {{% /md %}}</dd></dl>
@@ -612,20 +635,29 @@ Get an existing LoadBalancerService resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancerService</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancerService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerServiceHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerServiceHttpArgs]</span> = None<span class="p">, </span><span class="nx">listen_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxyprotocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LoadBalancerService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">destination_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerServiceHealthCheckArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerServiceHttpArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">listen_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">proxyprotocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> LoadBalancerService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancerService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancerService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LoadBalancerServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -868,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +927,7 @@ The following state arguments are supported:
 <a href="#state_listenport_nodejs" style="color: inherit; text-decoration: inherit;">listen<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +945,7 @@ The following state arguments are supported:
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +954,7 @@ The following state arguments are supported:
 <a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
 {{% /md %}}</dd></dl>
@@ -935,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +976,7 @@ The following state arguments are supported:
 <a href="#state_health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheck">Input[Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +985,7 @@ The following state arguments are supported:
 <a href="#state_http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehttp">Input[Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +994,7 @@ The following state arguments are supported:
 <a href="#state_listen_port_python" style="color: inherit; text-decoration: inherit;">listen_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -980,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_proxyprotocol_python" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
 {{% /md %}}</dd></dl>
@@ -1129,7 +1161,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -1138,7 +1170,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-required"
@@ -1147,7 +1179,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
 {{% /md %}}</dd><dt class="property-required"
@@ -1156,7 +1188,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1197,7 @@ The following state arguments are supported:
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1206,7 @@ The following state arguments are supported:
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd></dl>
@@ -1187,7 +1219,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -1196,7 +1228,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
 {{% /md %}}</dd><dt class="property-required"
@@ -1205,7 +1237,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
 {{% /md %}}</dd><dt class="property-required"
@@ -1214,7 +1246,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1255,7 @@ The following state arguments are supported:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Input[Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1264,7 @@ The following state arguments are supported:
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
 {{% /md %}}</dd></dl>
@@ -1345,7 +1377,7 @@ The following state arguments are supported:
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1386,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1395,7 @@ The following state arguments are supported:
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1404,7 @@ The following state arguments are supported:
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1413,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
 {{% /md %}}</dd></dl>
@@ -1394,7 +1426,7 @@ The following state arguments are supported:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1435,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1444,7 @@ The following state arguments are supported:
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1421,7 +1453,7 @@ The following state arguments are supported:
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1462,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
 {{% /md %}}</dd></dl>
@@ -1543,7 +1575,7 @@ The following state arguments are supported:
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1584,7 @@ The following state arguments are supported:
 <a href="#cookielifetime_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1593,7 @@ The following state arguments are supported:
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1602,7 @@ The following state arguments are supported:
 <a href="#redirecthttp_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1611,7 @@ The following state arguments are supported:
 <a href="#stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
 {{% /md %}}</dd></dl>
@@ -1592,7 +1624,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1633,7 @@ The following state arguments are supported:
 <a href="#cookie_lifetime_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1642,7 @@ The following state arguments are supported:
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1651,7 @@ The following state arguments are supported:
 <a href="#redirect_http_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1628,7 +1660,7 @@ The following state arguments are supported:
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
 {{% /md %}}</dd></dl>
