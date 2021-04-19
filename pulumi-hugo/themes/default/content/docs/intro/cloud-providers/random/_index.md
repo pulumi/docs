@@ -47,8 +47,8 @@ username = random.RandomPet("my-user-name")
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	random "github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	random "github.com/pulumi/pulumi-random/sdk/v4/go/random"
 )
 
 func main() {
@@ -92,7 +92,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/random`](https://www.npmjs.com/package/@pulumi/random)
 * Python: [`pulumi-random`](https://pypi.org/project/pulumi-random/)
-* Go: [`github.com/pulumi/pulumi-random/sdk/go/random`](https://github.com/pulumi/pulumi-random)
+* Go: [`github.com/pulumi/pulumi-random/sdk/v4/go/random`](https://github.com/pulumi/pulumi-random)
 * .NET: [`Pulumi.Random`](https://www.nuget.org/packages/Pulumi.Random)
 
 The Random provider is open source and available in the [pulumi/pulumi-random](https://github.com/pulumi/pulumi-random) repo.

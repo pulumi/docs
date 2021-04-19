@@ -70,7 +70,7 @@ resource_config = cloudinit.Config("resource", base64_encode=False,
 ```go
 import (
   "github.com/pulumi/pulumi-cloudinit/sdk/go/cloudinit"
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+  "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {

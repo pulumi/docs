@@ -49,7 +49,7 @@ $ pip3 install pulumi_terraform
 {{% choosable language go %}}
 
 ```bash
-$ go get github.com/pulumi/pulumi-terraform/sdk/v2
+$ go get github.com/pulumi/pulumi-terraform/sdk/v4
 ```
 
 {{% /choosable %}}
@@ -153,8 +153,8 @@ package main
 import (
     "os"
 
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    "github.com/pulumi/pulumi-terraform/sdk/v2/go/state"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi-terraform/sdk/v4/go/state"
 )
 
 func main() {
@@ -330,10 +330,10 @@ network_state = terraform.state.RemoteStateReference('network',
 package main
 
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 
-	"github.com/pulumi/pulumi-terraform/sdk/v2/go/state"
+	"github.com/pulumi/pulumi-terraform/sdk/v4/go/state"
 )
 
 func main() {

@@ -94,9 +94,9 @@ pulumi.export('private_ip', frontend.spec['cluster_ip'])
 package main
 
 import (
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -261,9 +261,9 @@ package main
 import (
     "path/filepath"
 
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -448,9 +448,9 @@ pulumi.export('frontend_ip', frontend.status.load_balancer.ingress[0].ip)
 package main
 
 import (
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-    helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/helm/v2"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+    helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -676,11 +676,11 @@ svc = Service('nginx-svc',
 package main
 
 import (
-    "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes"
-    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1"
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
+    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {

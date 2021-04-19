@@ -54,8 +54,8 @@ my_db = mysql.Database("my-database")
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	mysql "github.com/pulumi/pulumi-mysql/sdk/v2/go/mysql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	mysql "github.com/pulumi/pulumi-mysql/sdk/v3/go/mysql"
 )
 
 func main() {
@@ -99,7 +99,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/mysql`](https://www.npmjs.com/package/@pulumi/mysql)
 * Python: [`pulumi-mysql`](https://pypi.org/project/pulumi-mysql/)
-* Go: [`github.com/pulumi/pulumi-mysql/sdk/go/mysql`](https://github.com/pulumi/pulumi-mysql)
+* Go: [`github.com/pulumi/pulumi-mysql/sdk/v3/go/mysql`](https://github.com/pulumi/pulumi-mysql)
 * .NET: [`Pulumi.Mysql`](https://www.nuget.org/packages/Pulumi.Mysql)
 
 The MySQL provider is open source and available in the [pulumi/pulumi-mysql](https://github.com/pulumi/pulumi-mysql) repo.

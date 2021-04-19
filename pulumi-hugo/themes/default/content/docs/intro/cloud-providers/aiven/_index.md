@@ -72,8 +72,8 @@ service = aiven.Service("my-service",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	aiven "github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	aiven "github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
 )
 
 func main() {
@@ -130,7 +130,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/aiven`](https://www.npmjs.com/package/@pulumi/aiven)
 * Python: [`pulumi-aiven`](https://pypi.org/project/pulumi-aiven/)
-* Go: [`github.com/pulumi/pulumi-aiven/sdk/go/aiven`](https://github.com/pulumi/pulumi-aiven)
+* Go: [`github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven`](https://github.com/pulumi/pulumi-aiven)
 * .NET: [`Pulumi.Aiven`](https://www.nuget.org/packages/Pulumi.Aiven)
 
 The Aiven provider is open source and available in the [pulumi/pulumi-aiven](https://github.com/pulumi/pulumi-aiven) repo.

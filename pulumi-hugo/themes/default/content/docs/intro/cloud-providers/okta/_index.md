@@ -68,8 +68,8 @@ last_name="user",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	user "github.com/pulumi/pulumi-okta/sdk/v3/go/okta/user"
 )
 
 func main() {
@@ -124,7 +124,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/okta`](https://www.npmjs.com/package/@pulumi/okta)
 * Python: [`pulumi-okta`](https://pypi.org/project/pulumi-okta/)
-* Go: [`github.com/pulumi/pulumi-okta/sdk/go/okta`](https://github.com/pulumi/pulumi-okta)
+* Go: [`github.com/pulumi/pulumi-okta/sdk/v3/go/okta`](https://github.com/pulumi/pulumi-okta)
 * .NET: [`Pulumi.Okta`](https://www.nuget.org/packages/Pulumi.Okta)
 
 The Okta provider is open source and available in the [pulumi/pulumi-okta](https://github.com/pulumi/pulumi-okta) repo.

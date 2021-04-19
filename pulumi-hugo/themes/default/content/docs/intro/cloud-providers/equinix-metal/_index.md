@@ -7,7 +7,7 @@ menu:
     identifier: clouds-equinix-metal
     weight: 2
 
-aliases: 
+aliases:
   - "/docs/reference/clouds/packet/"
   - "/docs/intro/cloud-providers/packet/"
 ---
@@ -64,7 +64,7 @@ project = metal.Project("my-project",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	metal "github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix"
 )
 
@@ -112,7 +112,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/equinix-metal`](https://www.npmjs.com/package/@pulumi/equinix-metal)
 * Python: [`pulumi-equinix-metal`](https://pypi.org/project/pulumi-equinix-metal/)
-* Go: [`github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix`](https://github.com/pulumi/pulumi-equinix-metal)
+* Go: [`github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix`](https://github.com/pulumi/pulumi-equinix-metal)
 * .NET: [`Pulumi.EquinixMetal`](https://www.nuget.org/packages/Pulumi.EquinixMetal)
 
 The Equinix Metal provider is open source and available in the [pulumi/pulumi-equinix-metal](https://github.com/pulumi/pulumi-equinix-metal) repo.

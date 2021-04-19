@@ -69,8 +69,8 @@ user = rancher2.User("my-user",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	rancher2 "github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	rancher2 "github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
 )
 
 func main() {
@@ -124,7 +124,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/rancher2`](https://www.npmjs.com/package/@pulumi/rancher2)
 * Python: [`pulumi-rancher2`](https://pypi.org/project/pulumi-rancher2/)
-* Go: [`github.com/pulumi/pulumi-rancher2/sdk/go/rancher2`](https://github.com/pulumi/pulumi-rancher2)
+* Go: [`github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2`](https://github.com/pulumi/pulumi-rancher2)
 * .NET: [`Pulumi.Rancher2`](https://www.nuget.org/packages/Pulumi.Rancher2)
 
 The Rancher2 provider is open source and available in the [pulumi/pulumi-rancher2](https://github.com/pulumi/pulumi-rancher2) repo.

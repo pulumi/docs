@@ -77,8 +77,8 @@ route = mailgun.Route("test-route",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	mailgun "github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	mailgun "github.com/pulumi/pulumi-mailgun/sdk/v3/go/mailgun"
 )
 
 func main() {
@@ -139,7 +139,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/mailgun`](https://www.npmjs.com/package/@pulumi/mailgun)
 * Python: [`pulumi-mailgun`](https://pypi.org/project/pulumi-mailgun/)
-* Go: [`github.com/pulumi/pulumi-mailgun/sdk/go/mailgun`](https://github.com/pulumi/pulumi-mailgun)
+* Go: [`github.com/pulumi/pulumi-mailgun/sdk/v3/go/mailgun`](https://github.com/pulumi/pulumi-mailgun)
 * .NET: [`Pulumi.Mailgun`](https://www.nuget.org/packages/Pulumi.Mailgun)
 
 The Mailgun provider is open source and available in the [pulumi/pulumi-mailgun](https://github.com/pulumi/pulumi-mailgun) repo.

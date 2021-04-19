@@ -89,7 +89,7 @@ webserver = venafi.Certificate("webserver",
 ```go
 import (
 	"github.com/pulumi/pulumi-venafi/sdk/go/venafi"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {

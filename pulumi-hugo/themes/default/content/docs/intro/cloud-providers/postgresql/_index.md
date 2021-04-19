@@ -54,8 +54,8 @@ my_db = postgresql.Database("my-database")
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	postgresql "github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	postgresql "github.com/pulumi/pulumi-postgresql/sdk/v3/go/postgresql"
 )
 
 func main() {
@@ -98,7 +98,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/postgresql`](https://www.npmjs.com/package/@pulumi/postgresql)
 * Python: [`pulumi-postgresql`](https://pypi.org/project/pulumi-postgresql/)
-* Go: [`github.com/pulumi/pulumi-postgresql/sdk/go/postgresql`](https://github.com/pulumi/pulumi-postgresql)
+* Go: [`github.com/pulumi/pulumi-postgresql/sdk/v3/go/postgresql`](https://github.com/pulumi/pulumi-postgresql)
 * .NET: [`Pulumi.Postgresql`](https://www.nuget.org/packages/Pulumi.Postgresql)
 
 The PostgreSQL provider is open source and available in the [pulumi/pulumi-postgresql](https://github.com/pulumi/pulumi-postgresql) repo.

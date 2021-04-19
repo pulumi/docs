@@ -63,9 +63,9 @@ url = virtual_machine.dns_name.apply(
 {{% choosable language go %}}
 
 ```go
-url := vpc.DnsName.ApplyString(func(dnsName string) string {
+url := vpc.DnsName.ApplyT(func(dnsName string) string {
     return "https://" + dnsName
-})
+}).(pulumi.StringOutput)
 ```
 
 {{% /choosable %}}
@@ -249,9 +249,9 @@ if err != nil {
 
 record, err := route53.NewRecord(ctx, "validation", &route53.RecordArgs{
     Records: pulumi.StringArray{
-        cert.DomainValidationOptions.ApplyString(func(opts []acm.CertificateDomainValidationOption) string {
+        cert.DomainValidationOptions.ApplyT(func(opts []acm.CertificateDomainValidationOption) string {
             return *opts[0].ResourceRecordValue
-        }),
+        }).(pulumi.StringOutput),
     },
     ...
 })
@@ -461,7 +461,7 @@ var hostname pulumi.StringOutput
 var port pulumi.NumberOutput
 
 // Would like to produce a string equivalent to: http://${hostname}:${port}/
-url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
+url := pulumi.All(hostname, port).ApplyT(func (args []interface{}) string {
     return fmt.Sprintf("http://%s:%d/", args[0], args[1])
 })
 ```
@@ -569,9 +569,9 @@ def split(input):
 
 ```go
 func split(input pulumi.StringInput) pulumi.StringArrayOutput {
-    return input.ToStringOutput().ApplyStringArray(func(s string) []string {
+    return input.ToStringOutput().ApplyT(func(s string) []string {
         return strings.Split(s, ",")
-    })
+    }).(pulumi.StringArrayOutput)
 }
 ```
 

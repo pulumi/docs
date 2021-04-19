@@ -61,8 +61,8 @@ instance = cloudamqp.Instance("demo-instance",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	cloudamqp "github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	cloudamqp "github.com/pulumi/pulumi-cloudamqp/sdk/v3/go/cloudamqp"
 )
 
 func main() {
@@ -113,7 +113,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/cloudamqp`](https://www.npmjs.com/package/@pulumi/cloudamqp)
 * Python: [`pulumi-cloudamqp`](https://pypi.org/project/pulumi-cloudamqp/)
-* Go: [`github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp`](https://github.com/pulumi/pulumi-cloudamqp)
+* Go: [`github.com/pulumi/pulumi-cloudamqp/sdk/v3/go/cloudamqp`](https://github.com/pulumi/pulumi-cloudamqp)
 * .NET: [`Pulumi.Cloudamqp`](https://www.nuget.org/packages/Pulumi.Cloudamqp)
 
 The Fastly provider is open source and available in the [pulumi/pulumi-cloudamqp](https://github.com/pulumi/pulumi-cloudamqp) repo.

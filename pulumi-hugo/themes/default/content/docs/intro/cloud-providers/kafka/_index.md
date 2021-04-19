@@ -66,8 +66,8 @@ topic = kafka.Topic("topic",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	kafka "github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	kafka "github.com/pulumi/pulumi-kafka/sdk/v3/go/kafka"
 )
 
 func main() {
@@ -120,7 +120,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/kafka`](https://www.npmjs.com/package/@pulumi/kafka)
 * Python: [`pulumi-kafka`](https://pypi.org/project/pulumi-kafka/)
-* Go: [`github.com/pulumi/pulumi-kafka/sdk/go/kafka`](https://github.com/pulumi/pulumi-kafka)
+* Go: [`github.com/pulumi/pulumi-kafka/sdk/v3/go/kafka`](https://github.com/pulumi/pulumi-kafka)
 * .NET: [`Pulumi.Kafka`](https://www.nuget.org/packages/Pulumi.Kafka)
 
 The Kafka provider is open source and available in the [pulumi/pulumi-kafka](https://github.com/pulumi/pulumi-kafka) repo.

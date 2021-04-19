@@ -59,8 +59,8 @@ project = ado.core.Project("demo-project",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	ado "github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	ado "github.com/pulumi/pulumi-azuredevops/sdk/v2/go/azuredevops"
 )
 
 func main() {
@@ -109,7 +109,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/azuredevops`](https://www.npmjs.com/package/@pulumi/azuredevops)
 * Python: [`pulumi-azuredevops`](https://pypi.org/project/pulumi-azuredevops/)
-* Go: [`github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops`](https://github.com/pulumi/pulumi-azuredevops)
+* Go: [`github.com/pulumi/pulumi-azuredevops/sdk/v2/go/azuredevops`](https://github.com/pulumi/pulumi-azuredevops)
 * .NET: [`Pulumi.AzureDevOps`](https://www.nuget.org/packages/Pulumi.AzureDevOps)
 
 The AzureDevOps provider is open source and available in the [pulumi/pulumi-azuredevops](https://github.com/pulumi/pulumi-azuredevops) repo.

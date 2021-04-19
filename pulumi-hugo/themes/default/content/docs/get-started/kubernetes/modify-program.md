@@ -165,11 +165,11 @@ pulumi.export("ip", result)
 package main
 
 import (
-    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1"
-    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core/v1"
-    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+    appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
+    corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+    metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
@@ -232,16 +232,16 @@ func main() {
         var ip pulumi.StringOutput
 
         if isMinikube {
-            ip = frontend.Spec.ApplyString(func(val *corev1.ServiceSpec) string {
+            ip = frontend.Spec.ApplyT(func(val *corev1.ServiceSpec) string {
                 return *val.ClusterIP
-            })
+            }).(pulumi.StringOutput)
         } else {
-            ip = frontend.Status.ApplyString(func(val *corev1.ServiceStatus) string {
+            ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
                 if val.LoadBalancer.Ingress[0].Ip != nil {
                     return *val.LoadBalancer.Ingress[0].Ip
                 }
                 return *val.LoadBalancer.Ingress[0].Hostname
-            })
+            }).(pulumi.StringOutput)
         }
 
         ctx.Export("ip", ip)

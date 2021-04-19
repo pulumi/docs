@@ -80,9 +80,9 @@ pydomain = akamai.properties.EdgeHostName("test",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	"github.com/pulumi/pulumi-akamai/sdk/go/akamai"
-	"github.com/pulumi/pulumi-akamai/sdk/go/akam/properties"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-akamai/sdk/v2/go/akamai"
+	"github.com/pulumi/pulumi-akamai/sdk/v2/go/akam/properties"
 )
 
 func main() {
@@ -154,7 +154,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/akamai`](https://www.npmjs.com/package/@pulumi/akamai)
 * Python: [`pulumi-akamai`](https://pypi.org/project/pulumi-akamai/)
-* Go: [`github.com/pulumi/pulumi-akamai/sdk/go/akamai`](https://github.com/pulumi/pulumi-akamai)
+* Go: [`github.com/pulumi/pulumi-akamai/sdk/v2/go/akamai`](https://github.com/pulumi/pulumi-akamai)
 * .NET: [`Pulumi.Akamai`](https://www.nuget.org/packages/Pulumi.Akamai)
 
 The Akamai provider is open source and available in the [pulumi/pulumi-akamai](https://github.com/pulumi/pulumi-akamai) repo.

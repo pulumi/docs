@@ -50,8 +50,8 @@ We've already seen the Automation API being used in incredibly creative ways, an
 
 Here are some helpful links to get you started with the Automation API:
 
-* [Go Documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) - Go documentation for the Automation API.
-* [TypeScript/JavaScript Documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/) - Typescript documentation for the Automation API.
+* [Go Documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto) - Go documentation for the Automation API.
+* [TypeScript/JavaScript Documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) - Typescript documentation for the Automation API.
 * [Automation API examples](https://github.com/pulumi/automation-api-examples) - Examples of different Automation API use cases.
 
 ### Reusable Infrastructure Libraries

@@ -50,7 +50,7 @@ The Kubernetes provider supports several options for providing access to a Kuber
 
 ### Getting Started
 
-The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) guide.  
+The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) guide.
 
 Additional Kubernetes tutorials are available covering:
 
@@ -120,7 +120,7 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 - JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 - Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 - Go:
-  - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes`
+  - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes`
   - [GitHub](https://github.com/pulumi/pulumi-kubernetes/tree/master/sdk/go/kubernetes)
 - .NET: [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes)
 

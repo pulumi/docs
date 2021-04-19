@@ -53,8 +53,8 @@ deployment = spotinst.multai.Deployment("my_deployment")
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	multai "github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	multai "github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst/multai"
 )
 
 func main() {
@@ -97,7 +97,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/spotinst`](https://www.npmjs.com/package/@pulumi/spotinst)
 * Python: [`pulumi-spotinst`](https://pypi.org/project/pulumi-spotinst/)
-* Go: [`github.com/pulumi/pulumi-spotinst/sdk/go/spotinst`](https://github.com/pulumi/pulumi-spotinst)
+* Go: [`github.com/pulumi/pulumi-spotinst/sdk/v3/go/spotinst`](https://github.com/pulumi/pulumi-spotinst)
 * .NET: [`Pulumi.Spotinst`](https://www.nuget.org/packages/Pulumi.Spotinst)
 
 The Spotinst provider is open source and available in the [pulumi/pulumi-spotinst](https://github.com/pulumi/pulumi-spotinst) repo.

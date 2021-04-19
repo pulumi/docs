@@ -68,7 +68,10 @@ bucket = storage.Bucket('my-bucket')
 {{% choosable language go %}}
 
 ```go
-import "github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
+)
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
@@ -112,7 +115,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/gcp`](https://www.npmjs.com/package/@pulumi/gcp)
 * Python: [`pulumi-gcp`](https://pypi.org/project/pulumi-gcp/)
-* Go: [`github.com/pulumi/pulumi-gcp/sdk/go/gcp`](https://github.com/pulumi/pulumi-gcp)
+* Go: [`github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp`](https://github.com/pulumi/pulumi-gcp)
 * .NET: [`Pulumi.Gcp`](https://www.nuget.org/packages/Pulumi.Gcp)
 
 The GCP provider is open source and available in the [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp) repo.

@@ -69,8 +69,8 @@ record = dnsimple.Record("test",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v3/go/dnsimple"
 )
 
 func main() {
@@ -125,7 +125,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/dnsimple`](https://www.npmjs.com/package/@pulumi/dnsimple)
 * Python: [`pulumi-dnsimple`](https://pypi.org/project/pulumi-dnsimple/)
-* Go: [`github.com/pulumi/pulumi-dnsimple/sdk/go/dnsimple`](https://github.com/pulumi/pulumi-dnsimple)
+* Go: [`github.com/pulumi/pulumi-dnsimple/sdk/v3/go/dnsimple`](https://github.com/pulumi/pulumi-dnsimple)
 * .NET: [`Pulumi.Dnsimple`](https://www.nuget.org/packages/Pulumi.Dnsimple)
 
 The DNSimple provider is open source and available in the [pulumi/pulumi-dnsimple](https://github.com/pulumi/pulumi-dnsimple) repo.

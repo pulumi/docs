@@ -60,8 +60,8 @@ user = rabbitmq.User("user",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/v3/go/rabbitmq"
 )
 
 func main() {
@@ -109,7 +109,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/rabbitmq`](https://www.npmjs.com/package/@pulumi/rabbitmq)
 * Python: [`pulumi-rabbitmq`](https://pypi.org/project/pulumi-rabbitmq/)
-* Go: [`github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq`](https://github.com/pulumi/pulumi-rabbitmq)
+* Go: [`github.com/pulumi/pulumi-rabbitmq/sdk/v3/go/rabbitmq`](https://github.com/pulumi/pulumi-rabbitmq)
 * .NET: [`Pulumi.Rabbitmq`](https://www.nuget.org/packages/Pulumi.Rabbitmq)
 
 The RabbitMQ provider is open source and available in the [pulumi/pulumi-rabbitmq](https://github.com/pulumi/pulumi-rabbitmq) repo.

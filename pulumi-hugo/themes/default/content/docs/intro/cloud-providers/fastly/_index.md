@@ -87,8 +87,8 @@ service = fastly.Servicev1("my-service",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	fastly "github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	fastly "github.com/pulumi/pulumi-fastly/sdk/v3/go/fastly"
 )
 
 func main() {
@@ -163,7 +163,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/fastly`](https://www.npmjs.com/package/@pulumi/fastly)
 * Python: [`pulumi-fastly`](https://pypi.org/project/pulumi-fastly/)
-* Go: [`github.com/pulumi/pulumi-fastly/sdk/go/fastly`](https://github.com/pulumi/pulumi-fastly)
+* Go: [`github.com/pulumi/pulumi-fastly/sdk/v3/go/fastly`](https://github.com/pulumi/pulumi-fastly)
 * .NET: [`Pulumi.Fastly`](https://www.nuget.org/packages/Pulumi.Fastly)
 
 The Fastly provider is open source and available in the [pulumi/pulumi-fastly](https://github.com/pulumi/pulumi-fastly) repo.

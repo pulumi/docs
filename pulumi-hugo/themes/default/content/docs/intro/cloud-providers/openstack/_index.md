@@ -64,8 +64,8 @@ instance = compute.Instance("test",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	compute "github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	compute "github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/compute"
 )
 
 func main() {
@@ -114,7 +114,7 @@ The following packages are available in package managers:
 
 * JavaScript/TypeScript: [`@pulumi/openstack`](https://www.npmjs.com/package/@pulumi/openstack)
 * Python: [`pulumi-openstack`](https://pypi.org/project/pulumi-openstack/)
-* Go: [`github.com/pulumi/pulumi-openstack/sdk/go/openstack`](https://github.com/pulumi/pulumi-openstack)
+* Go: [`github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack`](https://github.com/pulumi/pulumi-openstack)
 * .NET: [`Pulumi.Openstack`](https://www.nuget.org/packages/Pulumi.Openstack)
 
 As with all Pulumi software solutions, the OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo. You can see all Pulumi infrastructure and cloud providers [here] ({{< relref "/docs/intro/cloud-providers" >}}).

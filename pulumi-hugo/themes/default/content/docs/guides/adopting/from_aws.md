@@ -88,9 +88,9 @@ web = aws.ec2.Instance('web',
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/cloudformation"
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -319,8 +319,8 @@ pulumi.export('vpc_id', network.outputs["VpcId"])
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/cloudformation"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 const (
@@ -550,8 +550,8 @@ pulumi.export('vpc_id', vpc.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {

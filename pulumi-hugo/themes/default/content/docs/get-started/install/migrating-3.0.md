@@ -4,11 +4,11 @@ meta_desc: This page provides instructions for upgrading to Pulumi 3.0
 no_on_this_page: true
 ---
 
-Pulumi 3.0 is currently in rc. If you'd like to try the rc and provide feedback, it's simple to upgrade:
+Pulumi 3.0 is generally available. It’s simple to upgrade:
 
-1. [Install the 3.0 CLI]({{< relref "/docs/get-started/install#installing-betas-and-previous-versions" >}})
-2. Take note of the updated CLI behaviors listed below
-3. Update each of your Pulumi programs to utilize the new version of the SDK
+1. [Install or upgrade to the 3.0 CLI]({{< relref "/docs/get-started/install" >}}).
+2. Review the updated CLI behaviors listed below.
+3. Update each of your Pulumi programs to utilize the new version of the SDK.
 
 ## Updated CLI behavior in Pulumi 3.0
 
@@ -35,7 +35,7 @@ Previously, when using the `--stack` option on CLI commands, Pulumi would incons
 ### Update to the new SDK version
 
 ```bash
-npm install @pulumi/pulumi@^3.0.0-rc
+npm install @pulumi/pulumi@^3.0.0
 ```
 
 ### Changes to pulumi.runtime.Mocks
@@ -153,8 +153,8 @@ pulumi.runtime.setMocks({
 Modify your `requirements.txt` file to update the Pulumi SDK and any providers you use, like this:
 
 ```
-pulumi>=3.0.0rc,<4.0.0
-pulumi-aws>=4.0.0rc,<5.0.0
+pulumi>=3.0.0,<4.0.0
+pulumi-aws>=4.0.0,<5.0.0
 ```
 
 Then run `pip install`:
@@ -185,7 +185,7 @@ export("ip", instance.network_interfaces[0].access_configs[0].nat_ip)
 
 ### Changes to pulumi.runtime.Mocks
 
-The signature of the `setMocks` function has changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `setMocks` in your code, you'll need to update to these new types.
+The signatures of the `new_resource` and `call` methods have changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `new_resource` and `call` in your code, you'll need to update to these new types.
 
 ```python
 # before
@@ -240,8 +240,8 @@ Modify your `go.mod` file to update the Pulumi SDK and any providers you use, li
 
 ```
 require (
-    github.com/pulumi/pulumi/sdk/v3 v3.0.0-rc.1
-    github.com/pulumi/pulumi-aws/sdk/v4 v4.0.0-rc.1
+    github.com/pulumi/pulumi/sdk/v3 v3.0.0
+    github.com/pulumi/pulumi-aws/sdk/v4 v4.0.0
 )
 ```
 
@@ -276,7 +276,7 @@ containerDef := image.ImageName.ApplyT(func(name string) (string, error) {
 
 ### Changes to pulumi.runtime.Mocks
 
-The signature of the `setMocks` function has changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `setMocks` in your code, you'll need to update to these new types.
+The signatures of the `NewResource` and `Call` functions have changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `setMocks` in your code, you'll need to update to these new types.
 
 ```go
 //before
@@ -326,12 +326,12 @@ func (mocks) Call(args MockCallArgs) (resource.PropertyMap, error) {
 Modify your project file to update the Pulumi SDK and any providers you use, like this:
 
 ```csharp
-<PackageReference Include="Pulumi" Version="3.0.*-*" />
+<PackageReference Include="Pulumi" Version="3.0.*" />
 ```
 
 ### Changes to pulumi.runtime.Mocks
 
-The signature of the `setMocks` function has changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `setMocks` in your code, you'll need to update to these new types.
+The signatures of the `NewResourceAsync` and `CallAsync` methods have changed with the introduction of the `pulumi.runtime.MockResourceArgs` and `pulumi.runtime.MockCallArgs` types. If you use `setMocks` in your code, you'll need to update to these new types.
 
 ```csharp
 // before
@@ -407,7 +407,7 @@ public Task<object> CallAsync(MockCallArgs args)
 
 ## Required updates for automation API users
 
-The Pulumi 3.0 rc includes the final preview of the Automation API, which standardizes the namespace requirements for Automation API. You need to update programs that use automation API to use the following namespaces:
+If you used a pre-GA release of Automation API, you need to update programs that use automation API to use the following namespaces:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -472,7 +472,14 @@ using Pulumi.Automation;
 
 {{< /chooser >}}
 
-## When you should upgrade to Pulumi 3.0
+## Remaining on Pulumi 2.0
 
-Pulumi 3.0 is currently in rc and not recommended for existing production workloads. Once it is made generally available (GA), we will recommend switching to Pulumi 3.0 in the docs and in the CLI via the normal upgrade prompts.
-`pulumi new` will continue to use the stable versions of the templates. You can use the `3.x` version of the templates, which will use the 3.0 SDK, by running `pulumi new https://github.com/pulumi/templates/tree/3.x`.
+We recommend switching to Pulumi 3.0 if possible. We will only push critical security and bug fixes into the 2.x branch.
+Other fixes, feature enhancements, and new functionality will not be supported in the 2.x branch. In addition, provider
+updates will only be built against Pulumi 3.0.
+
+If you wish to remain on the 2.x CLI, you can continue to download the CLI by referring to the manual installation
+instructions and choosing a specific version.
+
+Running `pulumi new` will attempt to use the latest versions of the project templates, which pull in the 3.0 SDK. You can continue to
+use the 2.x templates by running `pulumi new https://github.com/pulumi/templates/tree/2.x`.

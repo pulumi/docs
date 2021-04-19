@@ -72,8 +72,8 @@ monitor = f5bigip.ltm.Monitor("backend",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	ltm "github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	ltm "github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/ltm"
 )
 
 func main() {
@@ -130,7 +130,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/f5bigip`](https://www.npmjs.com/package/@pulumi/f5bigip)
 * Python: [`pulumi-f5bigip`](https://pypi.org/project/pulumi-f5bigip/)
-* Go: [`github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip`](https://github.com/pulumi/pulumi-f5bigip)
+* Go: [`github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip`](https://github.com/pulumi/pulumi-f5bigip)
 * .NET: [`Pulumi.F5bigip`](https://www.nuget.org/packages/Pulumi.F5bigip)
 
 The F5 BIG-IP provider is open source and available in the [pulumi/pulumi-f5bigip](https://github.com/pulumi/pulumi-f5bigip) repo.

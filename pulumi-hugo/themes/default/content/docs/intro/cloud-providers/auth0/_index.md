@@ -69,8 +69,8 @@ user = auth0.User("my-demo-user",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	auth0 "github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	auth0 "github.com/pulumi/pulumi-auth0/sdk/v2/go/auth0"
 )
 
 func main() {
@@ -124,7 +124,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/auth0`](https://www.npmjs.com/package/@pulumi/auth0)
 * Python: [`pulumi-auth0`](https://pypi.org/project/pulumi-auth0/)
-* Go: [`github.com/pulumi/pulumi-auth0/sdk/go/auth0`](https://github.com/pulumi/pulumi-auth0)
+* Go: [`github.com/pulumi/pulumi-auth0/sdk/v2/go/auth0`](https://github.com/pulumi/pulumi-auth0)
 * .NET: [`Pulumi.Auth0`](https://www.nuget.org/packages/Pulumi.Auth0)
 
 The Auth0 provider is open source and available in the [pulumi/pulumi-auth0](https://github.com/pulumi/pulumi-auth0) repo.

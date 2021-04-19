@@ -108,8 +108,8 @@ print(f'Hello, {name} -- I see your lucky number is {lucky}!')
 package main
 
 import (
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
@@ -208,8 +208,8 @@ print("Active:", data.get("active"))
 package main
 
 import (
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 type Data struct {

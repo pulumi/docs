@@ -60,7 +60,7 @@ network = hcloud.Network("demo-network",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	hcloud "github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
 )
 

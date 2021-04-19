@@ -59,8 +59,8 @@ demo_team = pagerduty.Team("demo-team",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	pagerduty "github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	pagerduty "github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty"
 )
 
 func main() {
@@ -108,7 +108,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/pagerduty`](https://www.npmjs.com/package/@pulumi/pagerduty)
 * Python: [`pulumi-pagerduty`](https://pypi.org/project/pulumi-pagerduty/)
-* Go: [`github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty`](https://github.com/pulumi/pulumi-pagerduty)
+* Go: [`github.com/pulumi/pulumi-pagerduty/sdk/v2/go/pagerduty`](https://github.com/pulumi/pulumi-pagerduty)
 * .NET: [`Pulumi.Pagerduty`](https://www.nuget.org/packages/Pulumi.Pagerduty)
 
 The PagerDuty provider is open source and available in the [pulumi/pulumi-pagerduty](https://github.com/pulumi/pulumi-pagerduty) repo.

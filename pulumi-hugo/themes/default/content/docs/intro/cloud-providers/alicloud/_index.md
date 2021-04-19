@@ -58,8 +58,8 @@ vpc = alicloud.vpc.Network("my-vpc",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	vpc "github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	vpc "github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/vpc"
 )
 
 func main() {
@@ -108,7 +108,7 @@ The following packages are available in package managers:
 
 * JavaScript/TypeScript: [`@pulumi/alicloud`](https://www.npmjs.com/package/@pulumi/alicloud)
 * Python: [`pulumi-alicloud`](https://pypi.org/project/pulumi-alicloud/)
-* Go: [`github.com/pulumi/pulumi-alicloud/sdk/go/alicloud`](https://github.com/pulumi/pulumi-alicloud)
+* Go: [`github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud`](https://github.com/pulumi/pulumi-alicloud)
 * .NET: [`Pulumi.Alicloud`](https://www.nuget.org/packages/Pulumi.Alicloud)
 
 The Alibaba Cloud provider is open source and available in the [pulumi/pulumi-alicloud](https://github.com/pulumi/pulumi-alicloud) repo.

@@ -56,8 +56,8 @@ key = tls.PrivateKey("my-private-key",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	tls "github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	tls "github.com/pulumi/pulumi-tls/sdk/v4/go/tls"
 )
 
 func main() {
@@ -106,7 +106,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/tls`](https://www.npmjs.com/package/@pulumi/tls)
 * Python: [`pulumi-tls`](https://pypi.org/project/pulumi-tls/)
-* Go: [`github.com/pulumi/pulumi-tls/sdk/go/tls`](https://github.com/pulumi/pulumi-tls)
+* Go: [`github.com/pulumi/pulumi-tls/sdk/v4/go/tls`](https://github.com/pulumi/pulumi-tls)
 * .NET: [`Pulumi.Tls`](https://www.nuget.org/packages/Pulumi.Tls)
 
 The TLS provider is open source and available in the [pulumi/pulumi-tls](https://github.com/pulumi/pulumi-tls) repo.

@@ -60,8 +60,8 @@ group = signalfx.DashboardGroup("my-group",
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	signalfx "github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	signalfx "github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx"
 )
 
 func main() {
@@ -109,7 +109,7 @@ The following packages are available in packager managers:
 
 * JavaScript/TypeScript: [`@pulumi/signalfx`](https://www.npmjs.com/package/@pulumi/signalfx)
 * Python: [`pulumi-signalfx`](https://pypi.org/project/pulumi-signalfx/)
-* Go: [`github.com/pulumi/pulumi-signalfx/sdk/go/signalfx`](https://github.com/pulumi/pulumi-signalfx)
+* Go: [`github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx`](https://github.com/pulumi/pulumi-signalfx)
 * .NET: [`Pulumi.Signalfx`](https://www.nuget.org/packages/Pulumi.Signalfx)
 
 The SignalFx provider is open source and available in the [pulumi/pulumi-signalfx](https://github.com/pulumi/pulumi-signalfx) repo.

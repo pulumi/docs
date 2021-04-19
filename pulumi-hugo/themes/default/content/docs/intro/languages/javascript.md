@@ -126,7 +126,7 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
     "name": "my-package",
     "version": "1.0.0",
     "devDependencies": {
-        "@types/node": "^10.0.0"
+        "@types/node": "^12.0.0"
     },
     "dependencies": {
         ... as before ...

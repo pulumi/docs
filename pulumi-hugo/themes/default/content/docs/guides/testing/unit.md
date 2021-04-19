@@ -96,8 +96,8 @@ main.go:
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 type infrastructure struct {
@@ -240,14 +240,14 @@ ec2tests.ts:
 import * as pulumi from "@pulumi/pulumi";
 
 pulumi.runtime.setMocks({
-    newResource: function(type: string, name: string, inputs: any): {id: string, state: any} {
+    newResource: function(args: pulumi.runtime.MockResourceArgs): {id: string, state: any} {
         return {
-            id: inputs.name + "_id",
-            state: inputs,
+            id: args.inputs.name + "_id",
+            state: args.inputs,
         };
     },
-    call: function(token: string, args: any, provider?: string) {
-        return args;
+    call: function(args: MockCallArgs) {
+        return args.inputs;
     },
 });
 ```
@@ -262,9 +262,9 @@ test_ec2.py:
 import pulumi
 
 class MyMocks(pulumi.runtime.Mocks):
-    def new_resource(self, type_, name, inputs, provider, id_):
-        return [name + '_id', inputs]
-    def call(self, token, args, provider):
+    def new_resource(self, args: pulumi.runtime.MockResourceArgs):
+        return [args.name + '_id', args.inputs]
+    def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
 
 pulumi.runtime.set_mocks(MyMocks())
@@ -278,17 +278,17 @@ main_test.go:
 
 ```go
 import (
-   "github.com/pulumi/pulumi/sdk/v2/go/common/resource"
+   "github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 )
 
 type mocks int
 
-func (mocks) NewResource(typeToken, name string, inputs resource.PropertyMap, provider, id string) (string, resource.PropertyMap, error) {
-	return name + "_id", inputs, nil
+func (mocks) NewResource(args MockResourceArgs) (string, resource.PropertyMap, error) {
+	return args.Name + "_id", args.Inputs, nil
 }
 
-func (mocks) Call(token string, args resource.PropertyMap, provider string) (resource.PropertyMap, error) {
-	return args, nil
+func (mocks) Call(args MockCallArgs) (resource.PropertyMap, error) {
+	return args.Inputs, nil
 }
 ```
 
@@ -304,11 +304,10 @@ public static class Testing
     public static Task<ImmutableArray<Resource>> RunAsync<T>() where T : Stack, new()
     {
         var mocks = new Mock<IMocks>();
-        mocks.Setup(m => m.NewResourceAsync(It.IsAny<string>(), It.IsAny<string>(),
-                It.IsAny<ImmutableDictionary<string, object>>(), It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync((string type, string name, ImmutableDictionary<string, object> inputs, string? provider, string? id) => (id ?? "", inputs));
-        mocks.Setup(m => m.CallAsync(It.IsAny<string>(), It.IsAny<ImmutableDictionary<string, object>>(), It.IsAny<string>()))
-            .ReturnsAsync((string token, ImmutableDictionary<string, object> args, string? provider) => args);
+        mocks.Setup(m => m.NewResourceAsync(MockResourceArgs args)
+            .ReturnsAsync((args) => (args.Id ?? "", args.Inputs));
+        mocks.Setup(m => m.CallAsync(MockCallArgs args)
+            .ReturnsAsync((args) => args.Args);
         return Deployment.TestAsync<T>(mocks.Object, new TestOptions { IsPreview = false });
     }
 }
@@ -388,9 +387,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/common/resource"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -836,8 +835,8 @@ main.go:
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 type infrastructure struct {
