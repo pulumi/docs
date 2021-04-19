@@ -23,7 +23,6 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/pelletier/go-toml v1.9.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375 // indirect
 	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210416164152-4ca68d21a62f // indirect
 	github.com/quasilyte/go-ruleguard v0.3.4 // indirect
