@@ -26,19 +26,41 @@ meta_desc: "Documentation for the consul.PreparedQuery resource with examples, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryDnsArgs]</span> = None<span class="p">, </span><span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryFailoverArgs]</span> = None<span class="p">, </span><span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryDnsArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryFailoverArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryTemplateArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreparedQuery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreparedQuery</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreparedQuery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreparedQuery</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreparedQuery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PreparedQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +95,32 @@ meta_desc: "Documentation for the consul.PreparedQuery resource with examples, i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PreparedQueryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +129,7 @@ meta_desc: "Documentation for the consul.PreparedQuery resource with examples, i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +153,7 @@ meta_desc: "Documentation for the consul.PreparedQuery resource with examples, i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -528,7 +560,7 @@ This overrides the token that the agent provides by default.
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -537,7 +569,7 @@ This overrides the token that the agent provides by default.
 <a href="#connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -548,7 +580,7 @@ prepared query will be matched against the proxy service. Defaults to false.
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -558,7 +590,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
+        <span class="property-type"><a href="#preparedquerydns">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Dns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +599,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Failover<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -577,7 +609,7 @@ nodes are available in the local DC.
 <a href="#ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -591,7 +623,7 @@ can be fixed.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -602,7 +634,7 @@ to configure the query as a catch-all.
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -614,7 +646,7 @@ request.
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -625,7 +657,7 @@ values present.
 <a href="#onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -635,7 +667,7 @@ return nodes with passing health checks in the result.
 <a href="#servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -646,7 +678,7 @@ metadata values present.
 <a href="#session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -659,7 +691,7 @@ parameter is omitted the query will not expire.
 <a href="#storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -669,7 +701,7 @@ query. This token will be used by default whenever the query is executed.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -680,7 +712,7 @@ disallowed.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Template<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -690,7 +722,7 @@ single prepared query respond to many different requests.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -704,7 +736,7 @@ This overrides the token that the agent provides by default.
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +745,7 @@ This overrides the token that the agent provides by default.
 <a href="#connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -724,7 +756,7 @@ prepared query will be matched against the proxy service. Defaults to false.
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -734,7 +766,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Input[Prepared<wbr>Query<wbr>Dns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +775,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Input[Prepared<wbr>Query<wbr>Failover<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -753,7 +785,7 @@ nodes are available in the local DC.
 <a href="#ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -767,7 +799,7 @@ can be fixed.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -778,7 +810,7 @@ to configure the query as a catch-all.
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -790,7 +822,7 @@ request.
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -801,7 +833,7 @@ values present.
 <a href="#only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -811,7 +843,7 @@ return nodes with passing health checks in the result.
 <a href="#service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -822,7 +854,7 @@ metadata values present.
 <a href="#session_python" style="color: inherit; text-decoration: inherit;">session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -835,7 +867,7 @@ parameter is omitted the query will not expire.
 <a href="#stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -845,7 +877,7 @@ query. This token will be used by default whenever the query is executed.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -856,7 +888,7 @@ disallowed.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Input[Prepared<wbr>Query<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -866,7 +898,7 @@ single prepared query respond to many different requests.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -936,20 +968,38 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PreparedQueryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreparedQuery</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PreparedQueryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreparedQuery</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryDnsArgs]</span> = None<span class="p">, </span><span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryFailoverArgs]</span> = None<span class="p">, </span><span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[PreparedQueryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PreparedQuery</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">connect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryDnsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryFailoverArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_check_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">near</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">only_passing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_meta</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">session</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">stored_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreparedQueryTemplateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PreparedQuery</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreparedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PreparedQueryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreparedQuery</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreparedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PreparedQueryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreparedQuery</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreparedQuery</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PreparedQueryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreparedQuery</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PreparedQueryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1410,7 +1460,7 @@ This overrides the token that the agent provides by default.
 <a href="#state_connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -1421,7 +1471,7 @@ prepared query will be matched against the proxy service. Defaults to false.
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1431,7 +1481,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
+        <span class="property-type"><a href="#preparedquerydns">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Dns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1490,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Failover<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1450,7 +1500,7 @@ nodes are available in the local DC.
 <a href="#state_ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1464,7 +1514,7 @@ can be fixed.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -1475,7 +1525,7 @@ to configure the query as a catch-all.
 <a href="#state_near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -1487,7 +1537,7 @@ request.
 <a href="#state_nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -1498,7 +1548,7 @@ values present.
 <a href="#state_onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -1508,7 +1558,7 @@ return nodes with passing health checks in the result.
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1567,7 @@ return nodes with passing health checks in the result.
 <a href="#state_servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -1528,7 +1578,7 @@ metadata values present.
 <a href="#state_session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1541,7 +1591,7 @@ parameter is omitted the query will not expire.
 <a href="#state_storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -1551,7 +1601,7 @@ query. This token will be used by default whenever the query is executed.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -1562,7 +1612,7 @@ disallowed.
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">pulumi<wbr>Input<Prepared<wbr>Query<wbr>Template<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1572,7 +1622,7 @@ single prepared query respond to many different requests.
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -1586,7 +1636,7 @@ This overrides the token that the agent provides by default.
 <a href="#state_connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
@@ -1597,7 +1647,7 @@ prepared query will be matched against the proxy service. Defaults to false.
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1607,7 +1657,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedquerydns">Input[Prepared<wbr>Query<wbr>Dns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1666,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedqueryfailover">Input[Prepared<wbr>Query<wbr>Failover<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
@@ -1626,7 +1676,7 @@ nodes are available in the local DC.
 <a href="#state_ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1640,7 +1690,7 @@ can be fixed.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
@@ -1651,7 +1701,7 @@ to configure the query as a catch-all.
 <a href="#state_near_python" style="color: inherit; text-decoration: inherit;">near</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
@@ -1663,7 +1713,7 @@ request.
 <a href="#state_node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
@@ -1674,7 +1724,7 @@ values present.
 <a href="#state_only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
@@ -1684,7 +1734,7 @@ return nodes with passing health checks in the result.
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1743,7 @@ return nodes with passing health checks in the result.
 <a href="#state_service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
@@ -1704,7 +1754,7 @@ metadata values present.
 <a href="#state_session_python" style="color: inherit; text-decoration: inherit;">session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1717,7 +1767,7 @@ parameter is omitted the query will not expire.
 <a href="#state_stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
@@ -1727,7 +1777,7 @@ query. This token will be used by default whenever the query is executed.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
@@ -1738,7 +1788,7 @@ disallowed.
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#preparedquerytemplate">Input[Prepared<wbr>Query<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
@@ -1748,7 +1798,7 @@ single prepared query respond to many different requests.
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
@@ -1799,7 +1849,7 @@ This overrides the token that the agent provides by default.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd></dl>
@@ -1812,7 +1862,7 @@ This overrides the token that the agent provides by default.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd></dl>
@@ -1873,7 +1923,7 @@ sorted in ascending order of estimated RTT.
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1932,7 @@ sorted in ascending order of estimated RTT.
 <a href="#nearestn_nodejs" style="color: inherit; text-decoration: inherit;">nearest<wbr>N</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
@@ -1896,7 +1946,7 @@ sorted in ascending order of estimated RTT.
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1955,7 @@ sorted in ascending order of estimated RTT.
 <a href="#nearest_n_python" style="color: inherit; text-decoration: inherit;">nearest_<wbr>n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
@@ -1969,7 +2019,7 @@ only `name_prefix_match` is supported.
 <a href="#regexp_nodejs" style="color: inherit; text-decoration: inherit;">regexp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
@@ -1979,7 +2029,7 @@ only `name_prefix_match` is supported.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
@@ -1993,7 +2043,7 @@ only `name_prefix_match` is supported.
 <a href="#regexp_python" style="color: inherit; text-decoration: inherit;">regexp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
@@ -2003,7 +2053,7 @@ only `name_prefix_match` is supported.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.

@@ -26,19 +26,31 @@ meta_desc: "Documentation for the consul.KeyPrefix resource with examples, input
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyPrefixSubkeyCollectionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyPrefix</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyPrefix</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KeyPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +85,32 @@ meta_desc: "Documentation for the consul.KeyPrefix resource with examples, input
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KeyPrefixArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +119,7 @@ meta_desc: "Documentation for the consul.KeyPrefix resource with examples, input
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +143,7 @@ meta_desc: "Documentation for the consul.KeyPrefix resource with examples, input
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -308,7 +330,7 @@ token that the agent provides by default.
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -319,7 +341,7 @@ end with a slash, to manage a "folder" of keys.
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -329,7 +351,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd><dt class="property-optional"
@@ -338,7 +360,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">pulumi<wbr>Input<pulumi<wbr>Input<Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -348,7 +370,7 @@ Multiple blocks supported.
 <a href="#subkeys_nodejs" style="color: inherit; text-decoration: inherit;">subkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -360,7 +382,7 @@ the given path prefix.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -374,7 +396,7 @@ token that the agent provides by default.
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -385,7 +407,7 @@ end with a slash, to manage a "folder" of keys.
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -395,7 +417,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd><dt class="property-optional"
@@ -404,7 +426,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Sequence[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Input[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -414,7 +436,7 @@ Multiple blocks supported.
 <a href="#subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -426,7 +448,7 @@ the given path prefix.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -496,20 +518,28 @@ Get an existing KeyPrefix resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyPrefixState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyPrefix</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyPrefixState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyPrefix</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyPrefix</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyPrefixSubkeyCollectionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> KeyPrefix</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyPrefix<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KeyPrefixState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyPrefix</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyPrefix<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KeyPrefixState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyPrefix</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyPrefix</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KeyPrefixState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyPrefix</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KeyPrefixState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -750,7 +780,7 @@ token that the agent provides by default.
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -760,7 +790,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +799,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -780,7 +810,7 @@ end with a slash, to manage a "folder" of keys.
 <a href="#state_subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">pulumi<wbr>Input<pulumi<wbr>Input<Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -790,7 +820,7 @@ Multiple blocks supported.
 <a href="#state_subkeys_nodejs" style="color: inherit; text-decoration: inherit;">subkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -802,7 +832,7 @@ the given path prefix.
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -816,7 +846,7 @@ token that the agent provides by default.
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -826,7 +856,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +865,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -846,7 +876,7 @@ end with a slash, to manage a "folder" of keys.
 <a href="#state_subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Sequence[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Input[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -856,7 +886,7 @@ Multiple blocks supported.
 <a href="#state_subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -868,7 +898,7 @@ the given path prefix.
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -959,7 +989,7 @@ to attach to the key (defaults to 0).
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the path (which will be appended to the given
 `path_prefix`) in Consul that should be written to.
@@ -969,7 +999,7 @@ to attach to the key (defaults to 0).
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +1008,7 @@ to attach to the key (defaults to 0).
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
@@ -992,7 +1022,7 @@ to attach to the key (defaults to 0).
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the path (which will be appended to the given
 `path_prefix`) in Consul that should be written to.
@@ -1002,7 +1032,7 @@ to attach to the key (defaults to 0).
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1041,7 @@ to attach to the key (defaults to 0).
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
