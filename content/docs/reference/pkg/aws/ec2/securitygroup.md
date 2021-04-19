@@ -30,7 +30,7 @@ a conflict of rule settings and will overwrite rules.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Basic usage
+### Basic Usage
 
 
 {{< example csharp >}}
@@ -59,6 +59,10 @@ class MyStack : Stack
                     {
                         aws_vpc.Main.Cidr_block,
                     },
+                    Ipv6CidrBlocks = 
+                    {
+                        aws_vpc.Main.Ipv6_cidr_block,
+                    },
                 },
             },
             Egress = 
@@ -71,6 +75,10 @@ class MyStack : Stack
                     CidrBlocks = 
                     {
                         "0.0.0.0/0",
+                    },
+                    Ipv6CidrBlocks = 
+                    {
+                        "::/0",
                     },
                 },
             },
@@ -90,7 +98,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
+			Egress: ec2.SecurityGroupEgressArray{
+				&ec2.SecurityGroupEgressArgs{
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+					FromPort: pulumi.Int(0),
+					Ipv6CidrBlocks: pulumi.StringArray{
+						pulumi.String("::/0"),
+					},
+					Protocol: pulumi.String("-1"),
+					ToPort:   pulumi.Int(0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -110,12 +150,14 @@ allow_tls = aws.ec2.SecurityGroup("allowTls",
         to_port=443,
         protocol="tcp",
         cidr_blocks=[aws_vpc["main"]["cidr_block"]],
+        ipv6_cidr_blocks=[aws_vpc["main"]["ipv6_cidr_block"]],
     )],
     egress=[aws.ec2.SecurityGroupEgressArgs(
         from_port=0,
         to_port=0,
         protocol="-1",
         cidr_blocks=["0.0.0.0/0"],
+        ipv6_cidr_blocks=["::/0"],
     )],
     tags={
         "Name": "allow_tls",
@@ -142,12 +184,14 @@ const allowTls = new aws.ec2.SecurityGroup("allowTls", {
         toPort: 443,
         protocol: "tcp",
         cidrBlocks: [aws_vpc.main.cidr_block],
+        ipv6CidrBlocks: [aws_vpc.main.ipv6_cidr_block],
     }],
     egress: [{
         fromPort: 0,
         toPort: 0,
         protocol: "-1",
         cidrBlocks: ["0.0.0.0/0"],
+        ipv6CidrBlocks: ["::/0"],
     }],
     tags: {
         Name: "allow_tls",
@@ -161,7 +205,7 @@ const allowTls = new aws.ec2.SecurityGroup("allowTls", {
 
 
 
-### Usage with prefix list IDs
+### Usage With Prefix List IDs
 
 
 {{< example csharp >}}
@@ -178,10 +222,9 @@ class MyStack : Stack
         {
         });
         // ... other configuration ...
+        // ... other configuration ...
         var example = new Aws.Ec2.SecurityGroup("example", new Aws.Ec2.SecurityGroupArgs
         {
-            Description = "Allow TLS inbound traffic",
-            VpcId = aws_vpc.Main.Id,
             Egress = 
             {
                 new Aws.Ec2.Inputs.SecurityGroupEgressArgs
@@ -211,8 +254,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -222,8 +265,6 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
-			Description: pulumi.String("Allow TLS inbound traffic"),
-			VpcId:       pulumi.Any(aws_vpc.Main.Id),
 			Egress: ec2.SecurityGroupEgressArray{
 				&ec2.SecurityGroupEgressArgs{
 					FromPort: pulumi.Int(0),
@@ -255,15 +296,13 @@ import pulumi_aws as aws
 
 my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
 # ... other configuration ...
-example = aws.ec2.SecurityGroup("example",
-    description="Allow TLS inbound traffic",
-    vpc_id=aws_vpc["main"]["id"],
-    egress=[aws.ec2.SecurityGroupEgressArgs(
-        from_port=0,
-        to_port=0,
-        protocol="-1",
-        prefix_list_ids=[my_endpoint.prefix_list_id],
-    )])
+# ... other configuration ...
+example = aws.ec2.SecurityGroup("example", egress=[aws.ec2.SecurityGroupEgressArgs(
+    from_port=0,
+    to_port=0,
+    protocol="-1",
+    prefix_list_ids=[my_endpoint.prefix_list_id],
+)])
 ```
 
 
@@ -279,16 +318,13 @@ import * as aws from "@pulumi/aws";
 
 const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
 // ... other configuration ...
-const example = new aws.ec2.SecurityGroup("example", {
-    description: "Allow TLS inbound traffic",
-    vpcId: aws_vpc.main.id,
-    egress: [{
-        fromPort: 0,
-        toPort: 0,
-        protocol: "-1",
-        prefixListIds: [myEndpoint.prefixListId],
-    }],
-});
+// ... other configuration ...
+const example = new aws.ec2.SecurityGroup("example", {egress: [{
+    fromPort: 0,
+    toPort: 0,
+    protocol: "-1",
+    prefixListIds: [myEndpoint.prefixListId],
+}]});
 ```
 
 
@@ -308,19 +344,33 @@ const example = new aws.ec2.SecurityGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupEgressArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupIngressArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SecurityGroupArgs]</a></span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -355,22 +405,32 @@ const example = new aws.ec2.SecurityGroup("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecurityGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -379,7 +439,7 @@ const example = new aws.ec2.SecurityGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -403,7 +463,7 @@ const example = new aws.ec2.SecurityGroup("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -469,8 +529,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">List&lt;Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_csharp">
@@ -479,8 +538,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -489,8 +547,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
@@ -499,8 +556,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerulesondelete_csharp">
@@ -509,13 +565,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -524,7 +574,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
@@ -533,7 +583,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -555,8 +605,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">[]Security<wbr>Group<wbr>Egress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_go">
@@ -565,8 +614,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -575,8 +623,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
@@ -585,8 +632,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerulesondelete_go">
@@ -595,13 +641,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -610,7 +650,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
@@ -619,7 +659,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -639,20 +679,18 @@ Default `false`
 <a href="#egress_nodejs" style="color: inherit; text-decoration: inherit;">egress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupegress">Security<wbr>Group<wbr>Egress[]</a></span>
+        <span class="property-type"><a href="#securitygroupegress">Security<wbr>Group<wbr>Egress<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_nodejs">
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></span>
+        <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -661,8 +699,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
@@ -671,8 +708,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokerulesondelete_nodejs">
@@ -681,13 +717,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -696,7 +726,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
@@ -705,7 +735,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -727,8 +757,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">Sequence[Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_python">
@@ -737,8 +766,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">Sequence[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -747,8 +775,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
@@ -757,8 +784,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoke_rules_on_delete_python">
@@ -767,13 +793,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -782,7 +802,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
@@ -791,7 +811,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -811,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -828,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -841,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -858,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -871,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -888,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -901,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -918,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -930,20 +950,32 @@ Get an existing SecurityGroup resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupEgressArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityGroupIngressArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecurityGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecurityGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1054,7 +1086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1072,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">List&lt;Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_csharp">
@@ -1082,8 +1113,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1092,8 +1122,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
@@ -1102,8 +1131,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_csharp">
@@ -1112,7 +1140,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerulesondelete_csharp">
@@ -1121,13 +1149,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1136,7 +1158,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
@@ -1145,7 +1167,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1158,7 +1180,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1176,8 +1198,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">[]Security<wbr>Group<wbr>Egress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_go">
@@ -1186,8 +1207,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1196,8 +1216,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
@@ -1206,8 +1225,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_go">
@@ -1216,7 +1234,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerulesondelete_go">
@@ -1225,13 +1243,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1240,7 +1252,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
@@ -1249,7 +1261,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1262,7 +1274,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1278,20 +1290,18 @@ Default `false`
 <a href="#state_egress_nodejs" style="color: inherit; text-decoration: inherit;">egress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupegress">Security<wbr>Group<wbr>Egress[]</a></span>
+        <span class="property-type"><a href="#securitygroupegress">Security<wbr>Group<wbr>Egress<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_nodejs">
 <a href="#state_ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></span>
+        <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1300,8 +1310,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
@@ -1310,8 +1319,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerid_nodejs">
@@ -1320,7 +1328,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revokerulesondelete_nodejs">
@@ -1329,13 +1337,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1344,7 +1346,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
@@ -1353,7 +1355,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1366,7 +1368,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the security group
+    <dd>{{% md %}}ARN of the security group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1384,8 +1386,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupegress">Sequence[Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_python">
@@ -1394,8 +1395,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitygroupingress">Sequence[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1404,8 +1404,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the security group. If omitted, this provider will
-assign a random, unique name
+    <dd>{{% md %}}Name of the security group. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
@@ -1414,8 +1413,7 @@ assign a random, unique name
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified
-prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_id_python">
@@ -1424,7 +1422,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The owner ID.
+    <dd>{{% md %}}Owner ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revoke_rules_on_delete_python">
@@ -1433,13 +1431,7 @@ prefix. Conflicts with `name`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Instruct this provider to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default `false`
+    <dd>{{% md %}}Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1448,7 +1440,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
@@ -1457,7 +1449,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}VPC ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1481,7 +1473,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1490,8 +1482,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
@@ -1500,7 +1491,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_csharp">
@@ -1545,8 +1536,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_csharp">
@@ -1555,8 +1545,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1569,7 +1558,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1578,8 +1567,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
@@ -1588,7 +1576,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_go">
@@ -1633,8 +1621,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_go">
@@ -1643,8 +1630,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1657,7 +1643,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1666,8 +1652,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
@@ -1676,7 +1661,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_nodejs">
@@ -1721,8 +1706,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_nodejs">
@@ -1731,8 +1715,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1745,7 +1728,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -1754,8 +1737,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
@@ -1764,7 +1746,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_blocks_python">
@@ -1809,8 +1791,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_python">
@@ -1819,8 +1800,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1835,7 +1815,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1844,8 +1824,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
@@ -1854,7 +1833,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_csharp">
@@ -1899,8 +1878,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_csharp">
@@ -1909,8 +1887,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1923,7 +1900,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1932,8 +1909,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
@@ -1942,7 +1918,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_go">
@@ -1987,8 +1963,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_go">
@@ -1997,8 +1972,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2011,7 +1985,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -2020,8 +1994,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
@@ -2030,7 +2003,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_nodejs">
@@ -2075,8 +2048,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_nodejs">
@@ -2085,8 +2057,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2099,7 +2070,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is `icmp`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -2108,8 +2079,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol. If you select a protocol of
-"-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0.  The supported values are defined in the "IpProtocol" argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value to match the AWS API requirement.
+    <dd>{{% md %}}Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
@@ -2118,7 +2088,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End range port (or ICMP code if protocol is `icmp`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_blocks_python">
@@ -2163,8 +2133,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of security group Group Names if using
-EC2-Classic, or Group IDs if using a VPC.
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_python">
@@ -2173,8 +2142,7 @@ EC2-Classic, or Group IDs if using a VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this egress rule.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this egress rule.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

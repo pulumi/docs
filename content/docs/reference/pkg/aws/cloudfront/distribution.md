@@ -216,9 +216,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -653,19 +653,44 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -700,22 +725,32 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -724,7 +759,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -748,7 +783,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1207,7 +1242,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -1227,7 +1262,7 @@ user requests for content.
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -1237,7 +1272,7 @@ distribution (multiples allowed).
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -1247,7 +1282,7 @@ configuration for this distribution (maximum one).
 <a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1278,7 +1313,7 @@ distribution.
 <a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1352,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1328,7 +1363,7 @@ to your distribution (maximum one).
 <a href="#orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1339,7 +1374,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1702,6 +1737,16 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="trustedkeygroups_csharp">
+<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -1802,6 +1847,16 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="trustedkeygroups_go">
+<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedsigners_go">
@@ -1906,6 +1961,16 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="trustedkeygroups_nodejs">
+<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">Distribution<wbr>Trusted<wbr>Key<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
@@ -2008,6 +2073,16 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="trusted_key_groups_python">
+<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
@@ -2027,20 +2102,51 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Distribution</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Distribution</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedSignerArgs]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">,</span>
+        <span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_key_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedKeyGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedSignerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Distribution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DistributionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Distribution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DistributionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2386,6 +2492,16 @@ CloudFront system.
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trustedkeygroups_csharp">
+<a href="#state_trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trustedsigners_csharp">
 <a href="#state_trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -2678,6 +2794,16 @@ CloudFront system.
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trustedkeygroups_go">
+<a href="#state_trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trustedsigners_go">
 <a href="#state_trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -2772,7 +2898,7 @@ distribution.
 <a href="#state_customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2781,7 +2907,7 @@ distribution.
 <a href="#state_defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -2881,7 +3007,7 @@ currently in progress.
 <a href="#state_loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -2892,7 +3018,7 @@ to your distribution (maximum one).
 <a href="#state_orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -2903,7 +3029,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -2913,7 +3039,7 @@ distribution (multiples allowed).
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -2933,7 +3059,7 @@ distribution (multiples allowed).
 <a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -2970,11 +3096,21 @@ CloudFront system.
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trustedkeygroups_nodejs">
+<a href="#state_trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_trustedsigners_nodejs">
 <a href="#state_trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer[]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -2984,7 +3120,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#state_viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3260,6 +3396,16 @@ CloudFront system.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trusted_key_groups_python">
+<a href="#state_trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroup">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_signers_python">
@@ -3665,6 +3811,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trustedkeygroups_csharp">
+<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -3838,6 +3994,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trustedkeygroups_go">
+<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -3940,7 +4106,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -3950,7 +4116,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4009,6 +4175,16 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedkeygroups_nodejs">
+<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_nodejs">
@@ -4184,6 +4360,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trusted_key_groups_python">
+<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
@@ -4298,7 +4484,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4941,6 +5127,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trustedkeygroups_csharp">
+<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -5124,6 +5320,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trustedkeygroups_go">
+<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -5236,7 +5442,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5246,7 +5452,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5305,6 +5511,16 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedkeygroups_nodejs">
+<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_nodejs">
@@ -5490,6 +5706,16 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trusted_key_groups_python">
+<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
@@ -5604,7 +5830,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -6097,7 +6323,7 @@ web site of your custom origin.
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header[]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6108,7 +6334,7 @@ web site of your custom origin.
 <a href="#customoriginconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6130,7 +6356,7 @@ custom origin.
 <a href="#s3originconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6604,7 +6830,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failovercriteria_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -6613,7 +6839,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -6858,7 +7084,7 @@ identity][5] to associate with the origin.
 <a href="#georestriction_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6981,6 +7207,190 @@ distribute your content (`blacklist`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="distributiontrustedkeygroup">Distribution<wbr>Trusted<wbr>Key<wbr>Group</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="distributiontrustedkeygroupitem">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keygroupid_csharp">
+<a href="#keygroupid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the key group that contains the public keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_csharp">
+<a href="#keypairids_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keygroupid_go">
+<a href="#keygroupid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the key group that contains the public keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_go">
+<a href="#keypairids_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="keygroupid_nodejs">
+<a href="#keygroupid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the key group that contains the public keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_nodejs">
+<a href="#keypairids_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_group_id_python">
+<a href="#key_group_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the key group that contains the public keys
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_pair_ids_python">
+<a href="#key_pair_ids_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer</h4>
 
 {{% choosable language csharp %}}
@@ -7046,7 +7456,7 @@ user requests for content.
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
