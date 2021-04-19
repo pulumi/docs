@@ -117,19 +117,36 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardParameterDetailArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardSectionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -164,22 +181,32 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -479,7 +506,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd><dt class="property-required"
@@ -488,7 +515,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sections_nodejs" style="color: inherit; text-decoration: inherit;">sections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">Dashboard<wbr>Section[]</a></span>
+        <span class="property-type"><a href="#dashboardsection">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd><dt class="property-required"
@@ -497,7 +524,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -506,7 +533,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -515,7 +542,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -524,7 +551,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -533,7 +560,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#displayqueryparameters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
@@ -543,7 +570,7 @@ is shown
 <a href="#displaysectiontableofcontents_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
@@ -553,7 +580,7 @@ displayed by default when the dashboard is shown
 <a href="#eventfiltertype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
@@ -563,7 +590,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +599,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parameterdetails_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail[]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Parameter<wbr>Detail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd></dl>
@@ -585,7 +612,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd><dt class="property-required"
@@ -594,7 +621,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsection">Input[Dashboard<wbr>Section<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd><dt class="property-required"
@@ -603,7 +630,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -612,7 +639,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +648,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +657,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +666,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#display_query_parameters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
@@ -649,7 +676,7 @@ is shown
 <a href="#display_section_table_of_contents_python" style="color: inherit; text-decoration: inherit;">display_<wbr>section_<wbr>table_<wbr>of_<wbr>contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
@@ -659,7 +686,7 @@ displayed by default when the dashboard is shown
 <a href="#event_filter_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
@@ -669,7 +696,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +705,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">Input[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd></dl>
@@ -747,20 +774,33 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardParameterDetailArgs]]</span> = None<span class="p">, </span><span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSectionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">can_modifies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">can_views</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_query_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">display_section_table_of_contents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">event_filter_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">parameter_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardParameterDetailArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sections</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardSectionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1081,7 +1121,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1130,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1139,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1148,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_displayqueryparameters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
@@ -1118,7 +1158,7 @@ is shown
 <a href="#state_displaysectiontableofcontents_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
@@ -1128,7 +1168,7 @@ displayed by default when the dashboard is shown
 <a href="#state_eventfiltertype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
@@ -1138,7 +1178,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1187,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_parameterdetails_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail[]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Parameter<wbr>Detail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1196,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_sections_nodejs" style="color: inherit; text-decoration: inherit;">sections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">Dashboard<wbr>Section[]</a></span>
+        <span class="property-type"><a href="#dashboardsection">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1205,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1214,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd></dl>
@@ -1187,7 +1227,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1236,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1245,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1254,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_display_query_parameters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
@@ -1224,7 +1264,7 @@ is shown
 <a href="#state_display_section_table_of_contents_python" style="color: inherit; text-decoration: inherit;">display_<wbr>section_<wbr>table_<wbr>of_<wbr>contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
@@ -1234,7 +1274,7 @@ displayed by default when the dashboard is shown
 <a href="#state_event_filter_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
@@ -1244,7 +1284,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1293,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparameterdetail">Input[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1302,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsection">Input[Dashboard<wbr>Section<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1311,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1320,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd></dl>
@@ -1478,7 +1518,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd><dt class="property-required"
@@ -1487,7 +1527,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#hidefromview_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>From<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd><dt class="property-required"
@@ -1496,7 +1536,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd><dt class="property-required"
@@ -1505,7 +1545,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd><dt class="property-required"
@@ -1514,7 +1554,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parametertype_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd><dt class="property-required"
@@ -1523,7 +1563,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#valuestoreadablestrings_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>To<wbr>Readable<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
@@ -1533,7 +1573,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#dynamicfieldtype_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Field<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
@@ -1543,7 +1583,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#queryvalue_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1592,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#tagkey_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd></dl>
@@ -1565,7 +1605,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd><dt class="property-required"
@@ -1574,7 +1614,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#hide_from_view_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>from_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd><dt class="property-required"
@@ -1583,7 +1623,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd><dt class="property-required"
@@ -1592,7 +1632,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd><dt class="property-required"
@@ -1601,7 +1641,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#parameter_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd><dt class="property-required"
@@ -1610,7 +1650,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#values_to_readable_strings_python" style="color: inherit; text-decoration: inherit;">values_<wbr>to_<wbr>readable_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
@@ -1620,7 +1660,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#dynamic_field_type_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>field_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
@@ -1630,7 +1670,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#query_value_python" style="color: inherit; text-decoration: inherit;">query_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1679,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd></dl>
@@ -1698,7 +1738,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd><dt class="property-required"
@@ -1707,7 +1747,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrow">Dashboard<wbr>Section<wbr>Row[]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrow">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Row<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd></dl>
@@ -1720,7 +1760,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd><dt class="property-required"
@@ -1729,7 +1769,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrow">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrow">Input[Dashboard<wbr>Section<wbr>Row<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd></dl>
@@ -1770,7 +1810,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchart">Dashboard<wbr>Section<wbr>Row<wbr>Chart[]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchart">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd></dl>
@@ -1783,7 +1823,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchart">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchart">Input[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd></dl>
@@ -1950,7 +1990,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#chartsetting_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd><dt class="property-required"
@@ -1959,7 +1999,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd><dt class="property-required"
@@ -1968,7 +2008,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartsource">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartsource">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd><dt class="property-required"
@@ -1977,7 +2017,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#summarization_nodejs" style="color: inherit; text-decoration: inherit;">summarization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
@@ -1987,7 +2027,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2036,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#base_nodejs" style="color: inherit; text-decoration: inherit;">base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2045,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#chartattribute_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2053,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd></dl>
@@ -2026,7 +2066,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#chart_setting_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Input[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd><dt class="property-required"
@@ -2035,7 +2075,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd><dt class="property-required"
@@ -2044,7 +2084,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsectionrowchartsource">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardsectionrowchartsource">Input[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd><dt class="property-required"
@@ -2053,7 +2093,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#summarization_python" style="color: inherit; text-decoration: inherit;">summarization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
@@ -2063,7 +2103,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2112,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#base_python" style="color: inherit; text-decoration: inherit;">base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2121,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#chart_attribute_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2129,7 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd></dl>
@@ -3190,7 +3230,7 @@ Valid options are `full` or `last`
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -3203,7 +3243,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#autocolumntags_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Column<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3212,7 +3252,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#columntags_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3221,7 +3261,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#customtags_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3270,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#expecteddataspacing_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Spacing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
@@ -3240,7 +3280,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixedlegenddisplaystats_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Display<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3289,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixedlegendenabled_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3298,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixedlegendfilterfield_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
@@ -3268,7 +3308,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 <a href="#fixedlegendfilterlimit_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd><dt class="property-optional"
@@ -3277,7 +3317,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 <a href="#fixedlegendfiltersort_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
@@ -3287,7 +3327,7 @@ are `TOP`, and `BOTTOM`
 <a href="#fixedlegendhidelabel_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Hide<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3296,7 +3336,7 @@ are `TOP`, and `BOTTOM`
 <a href="#fixedlegendposition_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
@@ -3306,7 +3346,7 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 <a href="#fixedlegenduserawstats_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Use<wbr>Raw<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd><dt class="property-optional"
@@ -3315,7 +3355,7 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 <a href="#groupbysource_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
@@ -3326,7 +3366,7 @@ columns in the same row
 <a href="#invertdynamiclegendhovercontrol_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Dynamic<wbr>Legend<wbr>Hover<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
@@ -3336,7 +3376,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#linetype_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
@@ -3346,7 +3386,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3355,7 +3395,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3364,7 +3404,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#numtags_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd><dt class="property-optional"
@@ -3373,7 +3413,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#plainmarkdowncontent_nodejs" style="color: inherit; text-decoration: inherit;">plain<wbr>Markdown<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3382,7 +3422,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#showhosts_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3391,7 +3431,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#showlabels_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3400,7 +3440,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#showrawvalues_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Raw<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3409,7 +3449,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sortvaluesdescending_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Values<wbr>Descending</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3418,7 +3458,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sparklinedecimalprecision_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Decimal<wbr>Precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd><dt class="property-optional"
@@ -3427,7 +3467,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sparklinedisplaycolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
@@ -3437,7 +3477,7 @@ Values should be in `rgba(,,,,)` format
 <a href="#sparklinedisplayfontsize_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Font<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd><dt class="property-optional"
@@ -3446,7 +3486,7 @@ Values should be in `rgba(,,,,)` format
 <a href="#sparklinedisplayhorizontalposition_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Horizontal<wbr>Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
@@ -3456,7 +3496,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparklinedisplaypostfix_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Postfix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3505,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparklinedisplayprefix_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd><dt class="property-optional"
@@ -3474,7 +3514,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparklinedisplayvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
@@ -3484,7 +3524,7 @@ Valid options are `VALUE` or `LABEL`
 <a href="#sparklinedisplayverticalposition_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Vertical<wbr>Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3493,7 +3533,7 @@ Valid options are `VALUE` or `LABEL`
 <a href="#sparklinefillcolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Fill<wbr>Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
@@ -3503,7 +3543,7 @@ in `rgba(,,,,)`
 <a href="#sparklinelinecolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Line<wbr>Color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd><dt class="property-optional"
@@ -3512,7 +3552,7 @@ in `rgba(,,,,)`
 <a href="#sparklinesize_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
@@ -3522,7 +3562,7 @@ Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 <a href="#sparklinevaluecolormapapplyto_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Apply<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
@@ -3532,7 +3572,7 @@ the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 <a href="#sparklinevaluecolormapcolors_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Colors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
@@ -3542,7 +3582,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparklinevaluecolormapvalues_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3551,7 +3591,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparklinevaluecolormapvaluesv2s_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values<wbr>V2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
@@ -3561,7 +3601,7 @@ query values to colors.  Must contain one less element than `sparkline_value_col
 <a href="#sparklinevaluetextmaptexts_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Texts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
@@ -3571,7 +3611,7 @@ values map to.  Must contain one more element than `sparkline_value_text_map_thr
 <a href="#sparklinevaluetextmapthresholds_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
@@ -3581,7 +3621,7 @@ mapping different query values to display text.  Must contain one less element t
 <a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
@@ -3592,7 +3632,7 @@ center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `
 <a href="#tagmode_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
@@ -3602,7 +3642,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#timebasedcoloring_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Coloring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3651,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3660,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#windowing_nodejs" style="color: inherit; text-decoration: inherit;">windowing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
@@ -3630,7 +3670,7 @@ Valid options are `full` or `last`
 <a href="#xmax_nodejs" style="color: inherit; text-decoration: inherit;">xmax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3639,7 +3679,7 @@ Valid options are `full` or `last`
 <a href="#xmin_nodejs" style="color: inherit; text-decoration: inherit;">xmin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3648,7 +3688,7 @@ Valid options are `full` or `last`
 <a href="#y0scalesiby1024_nodejs" style="color: inherit; text-decoration: inherit;">y0Scale<wbr>Si<wbr>By1024</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3657,7 +3697,7 @@ Valid options are `full` or `last`
 <a href="#y0unitautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">y0Unit<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd><dt class="property-optional"
@@ -3666,7 +3706,7 @@ Valid options are `full` or `last`
 <a href="#y1scalesiby1024_nodejs" style="color: inherit; text-decoration: inherit;">y1Scale<wbr>Si<wbr>By1024</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3675,7 +3715,7 @@ Valid options are `full` or `last`
 <a href="#y1unitautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">y1Unit<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd><dt class="property-optional"
@@ -3684,7 +3724,7 @@ Valid options are `full` or `last`
 <a href="#y1units_nodejs" style="color: inherit; text-decoration: inherit;">y1Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd><dt class="property-optional"
@@ -3693,7 +3733,7 @@ Valid options are `full` or `last`
 <a href="#y1max_nodejs" style="color: inherit; text-decoration: inherit;">y1max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3702,7 +3742,7 @@ Valid options are `full` or `last`
 <a href="#y1min_nodejs" style="color: inherit; text-decoration: inherit;">y1min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3711,7 +3751,7 @@ Valid options are `full` or `last`
 <a href="#ymax_nodejs" style="color: inherit; text-decoration: inherit;">ymax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3720,7 +3760,7 @@ Valid options are `full` or `last`
 <a href="#ymin_nodejs" style="color: inherit; text-decoration: inherit;">ymin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd></dl>
@@ -3733,7 +3773,7 @@ Valid options are `full` or `last`
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -3746,7 +3786,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#auto_column_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>column_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3755,7 +3795,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#column_tags_python" style="color: inherit; text-decoration: inherit;">column_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3764,7 +3804,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#custom_tags_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -3773,7 +3813,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 <a href="#expected_data_spacing_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>spacing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
@@ -3783,7 +3823,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixed_legend_display_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>display_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd><dt class="property-optional"
@@ -3792,7 +3832,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixed_legend_enabled_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd><dt class="property-optional"
@@ -3801,7 +3841,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 <a href="#fixed_legend_filter_field_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
@@ -3811,7 +3851,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 <a href="#fixed_legend_filter_limit_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd><dt class="property-optional"
@@ -3820,7 +3860,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 <a href="#fixed_legend_filter_sort_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>sort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
@@ -3830,7 +3870,7 @@ are `TOP`, and `BOTTOM`
 <a href="#fixed_legend_hide_label_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>hide_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -3839,7 +3879,7 @@ are `TOP`, and `BOTTOM`
 <a href="#fixed_legend_position_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
@@ -3849,7 +3889,7 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 <a href="#fixed_legend_use_raw_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>use_<wbr>raw_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd><dt class="property-optional"
@@ -3858,7 +3898,7 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 <a href="#group_by_source_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
@@ -3869,7 +3909,7 @@ columns in the same row
 <a href="#invert_dynamic_legend_hover_control_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>dynamic_<wbr>legend_<wbr>hover_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
@@ -3879,7 +3919,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#line_type_python" style="color: inherit; text-decoration: inherit;">line_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
@@ -3889,7 +3929,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3898,7 +3938,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -3907,7 +3947,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#num_tags_python" style="color: inherit; text-decoration: inherit;">num_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd><dt class="property-optional"
@@ -3916,7 +3956,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#plain_markdown_content_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>markdown_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3925,7 +3965,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#show_hosts_python" style="color: inherit; text-decoration: inherit;">show_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3934,7 +3974,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#show_labels_python" style="color: inherit; text-decoration: inherit;">show_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3943,7 +3983,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#show_raw_values_python" style="color: inherit; text-decoration: inherit;">show_<wbr>raw_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3952,7 +3992,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sort_values_descending_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>values_<wbr>descending</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3961,7 +4001,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sparkline_decimal_precision_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>decimal_<wbr>precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd><dt class="property-optional"
@@ -3970,7 +4010,7 @@ reenable it when the ctrl-key is pressed)
 <a href="#sparkline_display_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
@@ -3980,7 +4020,7 @@ Values should be in `rgba(,,,,)` format
 <a href="#sparkline_display_font_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>font_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd><dt class="property-optional"
@@ -3989,7 +4029,7 @@ Values should be in `rgba(,,,,)` format
 <a href="#sparkline_display_horizontal_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>horizontal_<wbr>position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
@@ -3999,7 +4039,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparkline_display_postfix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>postfix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd><dt class="property-optional"
@@ -4008,7 +4048,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparkline_display_prefix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd><dt class="property-optional"
@@ -4017,7 +4057,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 <a href="#sparkline_display_value_type_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
@@ -4027,7 +4067,7 @@ Valid options are `VALUE` or `LABEL`
 <a href="#sparkline_display_vertical_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>vertical_<wbr>position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -4036,7 +4076,7 @@ Valid options are `VALUE` or `LABEL`
 <a href="#sparkline_fill_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>fill_<wbr>color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
@@ -4046,7 +4086,7 @@ in `rgba(,,,,)`
 <a href="#sparkline_line_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>line_<wbr>color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd><dt class="property-optional"
@@ -4055,7 +4095,7 @@ in `rgba(,,,,)`
 <a href="#sparkline_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
@@ -4065,7 +4105,7 @@ Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 <a href="#sparkline_value_color_map_apply_to_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>apply_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
@@ -4075,7 +4115,7 @@ the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 <a href="#sparkline_value_color_map_colors_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>colors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
@@ -4085,7 +4125,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparkline_value_color_map_values_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd><dt class="property-optional"
@@ -4094,7 +4134,7 @@ Must contain one more element than `sparkline_value_color_map_values_v2`. Values
 <a href="#sparkline_value_color_map_values_v2s_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values_<wbr>v2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
@@ -4104,7 +4144,7 @@ query values to colors.  Must contain one less element than `sparkline_value_col
 <a href="#sparkline_value_text_map_texts_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>texts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
@@ -4114,7 +4154,7 @@ values map to.  Must contain one more element than `sparkline_value_text_map_thr
 <a href="#sparkline_value_text_map_thresholds_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
@@ -4124,7 +4164,7 @@ mapping different query values to display text.  Must contain one less element t
 <a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
@@ -4135,7 +4175,7 @@ center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `
 <a href="#tag_mode_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
@@ -4145,7 +4185,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#time_based_coloring_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>coloring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd><dt class="property-optional"
@@ -4154,7 +4194,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd><dt class="property-optional"
@@ -4163,7 +4203,7 @@ Valid options are `all`, `top`, or `custom`
 <a href="#windowing_python" style="color: inherit; text-decoration: inherit;">windowing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
@@ -4173,7 +4213,7 @@ Valid options are `full` or `last`
 <a href="#xmax_python" style="color: inherit; text-decoration: inherit;">xmax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -4182,7 +4222,7 @@ Valid options are `full` or `last`
 <a href="#xmin_python" style="color: inherit; text-decoration: inherit;">xmin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -4191,7 +4231,7 @@ Valid options are `full` or `last`
 <a href="#y0_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>scale_<wbr>si_<wbr>by1024</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4200,7 +4240,7 @@ Valid options are `full` or `last`
 <a href="#y0_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>unit_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd><dt class="property-optional"
@@ -4209,7 +4249,7 @@ Valid options are `full` or `last`
 <a href="#y1_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>scale_<wbr>si_<wbr>by1024</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4218,7 +4258,7 @@ Valid options are `full` or `last`
 <a href="#y1_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>unit_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd><dt class="property-optional"
@@ -4227,7 +4267,7 @@ Valid options are `full` or `last`
 <a href="#y1_units_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd><dt class="property-optional"
@@ -4236,7 +4276,7 @@ Valid options are `full` or `last`
 <a href="#y1max_python" style="color: inherit; text-decoration: inherit;">y1max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -4245,7 +4285,7 @@ Valid options are `full` or `last`
 <a href="#y1min_python" style="color: inherit; text-decoration: inherit;">y1min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -4254,7 +4294,7 @@ Valid options are `full` or `last`
 <a href="#ymax_python" style="color: inherit; text-decoration: inherit;">ymax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd><dt class="property-optional"
@@ -4263,7 +4303,7 @@ Valid options are `full` or `last`
 <a href="#ymin_python" style="color: inherit; text-decoration: inherit;">ymin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd></dl>
@@ -4394,7 +4434,7 @@ Valid options are `full` or `last`
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd><dt class="property-required"
@@ -4403,7 +4443,7 @@ Valid options are `full` or `last`
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd><dt class="property-optional"
@@ -4412,7 +4452,7 @@ Valid options are `full` or `last`
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -4421,7 +4461,7 @@ Valid options are `full` or `last`
 <a href="#querybuilderenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Builder<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -4430,7 +4470,7 @@ Valid options are `full` or `last`
 <a href="#scatterplotsource_nodejs" style="color: inherit; text-decoration: inherit;">scatter<wbr>Plot<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4439,7 +4479,7 @@ Valid options are `full` or `last`
 <a href="#sourcedescription_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd></dl>
@@ -4452,7 +4492,7 @@ Valid options are `full` or `last`
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd><dt class="property-required"
@@ -4461,7 +4501,7 @@ Valid options are `full` or `last`
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd><dt class="property-optional"
@@ -4470,7 +4510,7 @@ Valid options are `full` or `last`
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -4479,7 +4519,7 @@ Valid options are `full` or `last`
 <a href="#query_builder_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>builder_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -4488,7 +4528,7 @@ Valid options are `full` or `last`
 <a href="#scatter_plot_source_python" style="color: inherit; text-decoration: inherit;">scatter_<wbr>plot_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4497,7 +4537,7 @@ Valid options are `full` or `last`
 <a href="#source_description_python" style="color: inherit; text-decoration: inherit;">source_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd></dl>
