@@ -42,18 +42,10 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdomainrecord" title="GetDomainRecord"><span class="symbol function"></span>GetDomainRecord</a></li>
-    <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
-    <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
-    <li><a href="getinstancebackups" title="GetInstanceBackups"><span class="symbol function"></span>GetInstanceBackups</a></li>
     <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
-    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
-    <li><a href="getkernel" title="GetKernel"><span class="symbol function"></span>GetKernel</a></li>
     <li><a href="getlkecluster" title="GetLkeCluster"><span class="symbol function"></span>GetLkeCluster</a></li>
     <li><a href="getnetworkingip" title="GetNetworkingIp"><span class="symbol function"></span>GetNetworkingIp</a></li>
-    <li><a href="getnodebalancer" title="GetNodeBalancer"><span class="symbol function"></span>GetNodeBalancer</a></li>
-    <li><a href="getnodebalancerconfig" title="GetNodeBalancerConfig"><span class="symbol function"></span>GetNodeBalancerConfig</a></li>
-    <li><a href="getnodebalancernode" title="GetNodeBalancerNode"><span class="symbol function"></span>GetNodeBalancerNode</a></li>
     <li><a href="getobjectstoragecluster" title="GetObjectStorageCluster"><span class="symbol function"></span>GetObjectStorageCluster</a></li>
     <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
     <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
@@ -72,6 +64,6 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>2.11.0</dd>
 </dl>
 
